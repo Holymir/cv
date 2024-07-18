@@ -1,0 +1,68 @@
+.skills {
+    background-color: rgba(28, 28, 28, 0.8); /* Semi-transparent background */
+    color: #fff;
+    padding: 10px 0;
+    backdrop-filter: blur(1px); /* Optional blurred background effect */
+    margin-bottom: 50px; /* Add space below the Experience section */
+}
+
+.skills .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.skills-content {
+    text-align: center;
+    flex: 0 0 60%; /* Adjust as needed */
+
+}
+
+.skills-content h3 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Two-column layout */
+    gap: 10px;
+    /* position: relative; */
+}
+
+.skill-item {
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #222; /* Dark background color for item */
+}
+
+.progress-bar {
+    background-color: #333; /* Dark background color for progress bar */
+    height: 15px;
+    border-radius: 6px;
+    margin-top: 5px;
+}
+
+.progress {
+    background-color: #00ffcc; /* Neon green color */
+    height: 100%;
+    border-radius: 6px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .skills-content {
+        flex: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

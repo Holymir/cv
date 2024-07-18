@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+import Header from './components/Header';
+import About from './components/About';
+import Limechain from './components/Experience/Limechain';
+import NetinfoHead from './components/Experience/NetinfoHead';
+import Netinfo from './components/Experience/Netinfo';
+import Skills from './components/Skills';
+import Contacts from './components/Contacts';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header></Header>
+      <About></About>
+      <Limechain></Limechain>
+      <NetinfoHead></NetinfoHead>
+      <Netinfo></Netinfo>
+      <Skills></Skills>
+      <Contacts />
     </div>
   );
 }

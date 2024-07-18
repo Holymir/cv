@@ -1,0 +1,88 @@
+/* src/components/Header.css */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Ensure the header is above other content */
+    background-color: rgb(0, 0, 0, 0.95); /* Background color when header is fixed */
+    color: #fff; /* Light text */
+    padding: 5px;
+    overflow: hidden; /* Ensure no overflow for asymmetric design */
+    border-bottom: 1px solid #333; /* Subtle border for a sleek look */
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative; /* For positioning abstract elements */
+}
+
+.header h1 {
+    font-size: 2em; /* Larger size for a bold look */
+    text-align: left;
+    flex: 1;
+    position: relative; /* For abstract design elements */
+    z-index: 2; /* Above the abstract shapes */
+}
+
+.header p {
+    font-size: 1.4em; /* Slightly larger for emphasis */
+    text-align: center;
+    flex: 1;
+    z-index: 2; /* Above the abstract shapes */
+}
+
+.header nav {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    z-index: 2; /* Above the abstract shapes */
+}
+
+.header nav a {
+    color: #4CAF50; /* Neon green color for links */
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.header nav a:hover {
+    color: #7CFC00; /* Brighter green on hover */
+    text-decoration: underline;
+}
+
+/* Abstract Design Elements */
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1), rgba(0,0,0,0));
+    transform: rotate(-25deg);
+    z-index: 1; /* Behind text and nav */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header h1, .header p {
+        flex: none;
+        margin-bottom: 15px;
+    }
+
+    .header nav {
+        justify-content: center;
+    }
+
+    .header nav a {
+        margin: 0 10px;
+    }
+}
