@@ -1,0 +1,38 @@
+.cmd-prompt {
+    width: 960px;
+    height: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #000;
+    color: #41FF00;
+    font-family: monospace;
+    border: 1px solid #41FF00;
+    overflow: hidden;
+}
+
+.cmd-body {
+    padding: 10px;
+}
+
+code {
+    white-space: pre;
+    position: relative;
+    line-height: 1.4em;
+}
+
+code::after {
+    content: '|';
+    position: absolute;
+    top: 0;
+    right: 0;
+    animation: typing 1s steps(40) infinite;
+}
+
+@keyframes typing {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}

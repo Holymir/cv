@@ -4,6 +4,7 @@
     padding: 10px 0;
     backdrop-filter: blur(1px); /* Optional blurred background effect */
     margin-bottom: 50px; /* Add space below the Experience section */
+    scroll-margin: 120px;
 }
 
 .skills .container {
