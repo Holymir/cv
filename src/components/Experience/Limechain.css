@@ -3,10 +3,9 @@
 .experience {
     background-color: rgba(28, 28, 28, 0.8); /* Semi-transparent background */
     color: #fff;
-    padding: 40px 0;
+    padding: 90px 0;
     backdrop-filter: blur(1px); /* Optional blurred background effect */
     margin-bottom: 50px; /* Add space below the Experience section */
-    scroll-margin: 82px;
 }
 
 .experience .container {
