@@ -4,7 +4,8 @@ import Limechain from './components/Experience/Limechain';
 import NetinfoHead from './components/Experience/NetinfoHead';
 import Netinfo from './components/Experience/Netinfo';
 import Skills from './components/Skills';
-import Contacts from './components/Contacts';
+import CmdPromptComponent from './components/Footer';
+import Certificates from './components/Certificates';
 import './App.css';
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
       <NetinfoHead></NetinfoHead>
       <Netinfo></Netinfo>
       <Skills></Skills>
-      <Contacts />
+      <Certificates />
+      <CmdPromptComponent />
     </div>
   );
 }

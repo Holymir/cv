@@ -1,0 +1,47 @@
+
+.certificates {
+    background-color: rgba(30, 30, 30, 0.8); /* Semi-transparent background */
+    color: #fff;
+    padding: 5px;
+    backdrop-filter: blur(1px); /* Optional: for a blurred background effect */
+}
+
+.sertificates .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Improve spacing */
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.certificate-list h3 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.certificate-list {
+    text-align: center;
+}
+
+.certificate-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two-column layout */
+    gap: 20px;
+}
+
+.certificate-item {
+    padding: 10px;
+    background-color: #111; /* Dark background color */
+    /* color: #00ffcc; */
+    border-radius: 10px;
+    text-align: center;
+}
+
+.certificate-link {
+    color: #00ffcc; /* Green neon text color for links */
+}
+
+.certificate-details {
+    color: #00ccff; /* Blue neon text color for details */
+}
