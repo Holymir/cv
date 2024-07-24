@@ -3,19 +3,12 @@ import "./Footer.css";
 
 const CmdPromptComponent = () => {
     const [code, setCode] = useState("");
-    const solidityCode = `
-        contract ReadCV {   
-            function ContactMe(bool youLikeMe) {
-                if (youLikeMe){
-                    call();
-                    sendMail();
-                }
-                else {
-                    hugs();
-                };
-            };
-        };   
-    `;
+    const solidityCode = `if [ "$youLikeMe" = true ]; then
+        call
+        sendMail
+    else
+        hugs
+    fi`;
 
     useEffect(() => {
         function startAnimation() {
@@ -38,7 +31,6 @@ const CmdPromptComponent = () => {
     }, [solidityCode]);
     return (
         <div className='cmd-prompt'>
-            <div className='cmd-header'>pragma solidity ^0.8.0;</div>
             <div className='cmd-body'>
                 <pre>
                     <code>{code}</code>

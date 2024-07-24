@@ -37,8 +37,8 @@
 .about-image {
     /* Abstract image styles */
     flex: 0 0 30%; /* Adjust the size of the image block */
-    width: 200px;
-    height: 200px;
+    width: 12.5rem;
+    height: 12.5rem;
     background-color: rgba(51, 51, 51, 0.5); /* Semi-transparent circle */
     display: flex;
     align-items: center;
@@ -67,7 +67,6 @@
 
     .about-text, .about-image {
         flex: none;
-        width: 100%; /* Full width on smaller screens */
         margin-bottom: 20px;
     }
 
