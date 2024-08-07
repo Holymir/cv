@@ -16,7 +16,7 @@ function Header() {
                     <a href='#about'>About</a>
                     <a href='#experience'>Experience</a>
                     <a href='#skills'>Skills & Technologies</a>
-                    <a href='#certificates'>Sertificates</a>
+                    <a href='#certificates'>Certificates</a>
                 </nav>
             </div>
             <div className='contacts'>
