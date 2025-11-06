@@ -2,6 +2,7 @@ import Header from './components/Header';
 import About from './components/About';
 import Experience from './components/Experience/Experience';
 import Skills from './components/Skills';
+import Projects from './components/Projects';
 import Education from './components/Education';
 import Languages from './components/Languages';
 import Footer from './components/Footer';
@@ -26,6 +27,7 @@ function App() {
         <AnimatedSection animationType="fade-up" delay={200}>
           <Skills></Skills>
         </AnimatedSection>
+        <Projects />
         <AnimatedSection animationType="fade-up" delay={100}>
           <Education />
         </AnimatedSection>
