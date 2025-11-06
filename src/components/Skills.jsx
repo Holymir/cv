@@ -1,43 +1,78 @@
-// src/components/Projects.js
+// src/components/Skills.js
 
 import React from "react";
-import "./Skills.css"; // Importing the CSS file for styling
+import "./Skills.css";
 
 function Skills() {
-    const skills = [
-        {name: "Solidity", level: "95%"},
-        {name: "Blockchain Security", level: "95%"},
-        {name: "Gas Optimization", level: "95%"},
-        {name: "Ethers.js", level: "95%"},
-        {name: "Hardhat", level: "95%"},
-        {name: "EVM", level: "80%"},
-        {name: "JavaScript", level: "80%"},
-        {name: "TypeScript", level: "80%"},
-        {name: "Layer 2 Solutions", level: "70%"},
-        {name: "DeFi Protocols", level: "60%"},
-        {name: "NFT", level: "60%"},
-        {name: "Foundry", level: "60%"},
-        {name: "React", level: "50%"},
-        {name: "Vue.js", level: "45%"},
-        {name: "Go lang", level: "40%"},
-        {name: "Rust", level: "40%"},
+    const skillCategories = [
+        {
+            category: "Blockchain & Smart Contracts",
+            skills: [
+                { name: "Solidity", level: "expert" },
+                { name: "Smart Contract Security", level: "expert" },
+                { name: "Gas Optimization", level: "expert" },
+                { name: "EVM", level: "advanced" },
+                { name: "Hardhat", level: "expert" },
+                { name: "Foundry", level: "intermediate" },
+                { name: "Ethers.js", level: "expert" },
+            ]
+        },
+        {
+            category: "Blockchain Ecosystems",
+            skills: [
+                { name: "DeFi Protocols", level: "intermediate" },
+                { name: "Layer 2 Solutions", level: "advanced" },
+                { name: "NFT Standards", level: "intermediate" },
+            ]
+        },
+        {
+            category: "Programming Languages",
+            skills: [
+                { name: "Java", level: "intermediate" },
+                { name: "JavaScript", level: "advanced" },
+                { name: "TypeScript", level: "advanced" },
+                { name: "Go", level: "intermediate" },
+                { name: "Rust", level: "intermediate" },
+            ]
+        },
+        {
+            category: "Backend & Frontend",
+            skills: [
+                { name: "Spring Boot", level: "intermediate" },
+                { name: "React", level: "intermediate" },
+                { name: "Vue.js", level: "intermediate" },
+                { name: "REST APIs", level: "advanced" },
+            ]
+        }
     ];
 
+    const getLevelColor = (level) => {
+        switch (level) {
+            case "expert": return "expert";
+            case "advanced": return "advanced";
+            case "intermediate": return "intermediate";
+            default: return "beginner";
+        }
+    };
+
     return (
-        <section id='skills' className='skills'>
-            <div className='container'>
-                <div className='skills-content'>
-                    <h3>Technical Skills</h3>
-                    <div className='skills-grid'>
-                        {skills.map((skill, index) => (
-                            <div key={index} className='skill-item'>
-                                <span>{skill.name}</span>
-                                <div className='progress-bar'>
-                                    <div className='progress' style={{width: skill.level}}></div>
-                                </div>
+        <section id="skills" className="skills">
+            <div className="container">
+                <h2 className="section-title">Technical Skills & Expertise</h2>
+                <div className="skills-categories">
+                    {skillCategories.map((category, index) => (
+                        <div key={index} className="skill-category">
+                            <h3 className="category-title">{category.category}</h3>
+                            <div className="skills-list">
+                                {category.skills.map((skill, idx) => (
+                                    <div key={idx} className={`skill-badge ${getLevelColor(skill.level)}`}>
+                                        <span className="skill-name">{skill.name}</span>
+                                        <span className="skill-level">{skill.level}</span>
+                                    </div>
+                                ))}
                             </div>
-                        ))}
-                    </div>
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>
