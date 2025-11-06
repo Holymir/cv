@@ -128,14 +128,17 @@
         background-color: white !important;
     }
 
-    /* CRITICAL: Always show responsibilities */
-    .responsibilities {
+    /* CRITICAL: Always show responsibilities - override hide class */
+    .responsibilities,
+    .responsibilities.hide,
+    .responsibilities.show {
         display: block !important;
         opacity: 1 !important;
         max-height: none !important;
         animation: none !important;
         padding: 0 !important;
         margin: 10px 0 0 0 !important;
+        overflow: visible !important;
     }
 
     .responsibilities li {
