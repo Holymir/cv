@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import "./Header.css";
-import {FaEnvelope, FaLinkedin, FaGithub, FaMapMarkerAlt, FaPhone, FaDownload} from "react-icons/fa";
+import {FaEnvelope, FaLinkedin, FaGithub, FaMapMarkerAlt, FaPhone, FaDownload, FaGlobe} from "react-icons/fa";
 
 function Header() {
     const [scrolled, setScrolled] = useState(false);
@@ -56,7 +56,7 @@ function Header() {
             <div className="header-container">
                 <div className="header-main">
                     <div className="header-info">
-                        <h1>Ventsislav Tsochev</h1>
+                        <h1>Ven Tsochev</h1>
                         <p className="title">Blockchain Developer</p>
                         <div className="contact-quick">
                             <a href="mailto:Ven.Tsochev@gmail.com" className="contact-link">
@@ -73,11 +73,14 @@ function Header() {
                         </div>
                     </div>
                     <div className="header-social">
-                        <a href="https://www.linkedin.com/in/ven-tsochev" target="_blank" rel="noopener noreferrer" className="social-link">
+                        <a href="https://www.linkedin.com/in/ven-tsochev" target="_blank" rel="noopener noreferrer" className="social-link" title="LinkedIn Profile">
                             <FaLinkedin />
                         </a>
-                        <a href="https://github.com/Holymir" target="_blank" rel="noopener noreferrer" className="social-link">
+                        <a href="https://github.com/Holymir" target="_blank" rel="noopener noreferrer" className="social-link" title="GitHub Profile">
                             <FaGithub />
+                        </a>
+                        <a href="https://sentifi.xyz" target="_blank" rel="noopener noreferrer" className="social-link" title="Portfolio - SentiFi AI">
+                            <FaGlobe />
                         </a>
                         <button onClick={() => window.print()} className="download-resume-btn" title="Print / Download Resume">
                             <FaDownload /> <span className="btn-text">Resume</span>
@@ -88,6 +91,7 @@ function Header() {
                     <a href="#about">About</a>
                     <a href="#experience">Experience</a>
                     <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
                     <a href="#education">Education</a>
                     <a href="#certificates">Certificates</a>
                 </nav>
