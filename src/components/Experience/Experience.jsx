@@ -9,6 +9,21 @@ import nova from "../../assets/nova.webp";
 function Experience() {
     const experiences = [
         {
+            title: "Blockchain & Java Developer",
+            company: "MM Fintech",
+            companyDescription: "Financial Technology Solutions",
+            period: "Sept 2022 - Present",
+            icon: null, // Add MM Fintech logo if available
+            responsibilities: [
+                "Developed and maintained blockchain-based financial applications using Solidity and Java",
+                "Implemented smart contracts for decentralized finance (DeFi) solutions in the fintech sector",
+                "Built and optimized backend services using Java Spring Boot framework for high-performance transaction processing",
+                "Integrated blockchain technology with traditional financial systems and APIs",
+                "Collaborated with product and security teams to ensure compliance with financial regulations",
+                "Conducted code reviews and mentored junior developers on blockchain and Java best practices"
+            ]
+        },
+        {
             title: "Blockchain Developer",
             company: "LimeChain",
             companyDescription: "Blockchain Consulting and Development",
