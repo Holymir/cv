@@ -73,7 +73,7 @@ function Header() {
                         </div>
                     </div>
                     <div className="header-social">
-                        <a href="https://linkedin.com/in/ventsislav-tsochev" target="_blank" rel="noopener noreferrer" className="social-link">
+                        <a href="https://www.linkedin.com/in/ven-tsochev" target="_blank" rel="noopener noreferrer" className="social-link">
                             <FaLinkedin />
                         </a>
                         <a href="https://github.com/Holymir" target="_blank" rel="noopener noreferrer" className="social-link">
