@@ -1,7 +1,7 @@
 /* src/components/About.css */
 
 .about {
-    background-color: rgba(30, 30, 30, 0.95);
+    background-color: rgba(30, 30, 30, 0.75);
     color: #fff;
     padding: 60px 0;
     backdrop-filter: blur(2px);
