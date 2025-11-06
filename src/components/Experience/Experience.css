@@ -1,7 +1,7 @@
 /* src/components/Experience.css */
 
 .experience {
-    background-color: rgba(28, 28, 28, 0.95);
+    background-color: rgba(28, 28, 28, 0.75);
     color: #fff;
     padding: 60px 0;
     backdrop-filter: blur(2px);
@@ -29,16 +29,20 @@
 }
 
 .experience-item {
-    margin-bottom: 50px;
-    padding: 30px;
-    background-color: rgba(40, 40, 40, 0.6);
+    margin-bottom: 20px;
+    padding: 25px;
+    background-color: rgba(40, 40, 40, 0.4);
     border-radius: 12px;
     border-left: 4px solid #4CAF50;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.experience-item.expanded {
+    background-color: rgba(40, 40, 40, 0.6);
 }
 
 .experience-item:hover {
-    transform: translateX(5px);
+    background-color: rgba(40, 40, 40, 0.7);
     box-shadow: 0 8px 24px rgba(76, 175, 80, 0.2);
 }
 
@@ -46,7 +50,40 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    cursor: pointer;
+    user-select: none;
+}
+
+.experience-item.collapsed .experience-header {
+    margin-bottom: 0;
+}
+
+.experience-item.expanded .experience-header {
     margin-bottom: 20px;
+}
+
+.experience-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.expand-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background-color: rgba(76, 175, 80, 0.15);
+    border-radius: 50%;
+    color: #4CAF50;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+}
+
+.experience-header:hover .expand-icon {
+    background-color: rgba(76, 175, 80, 0.3);
+    transform: scale(1.1);
 }
 
 .experience-title-section {
@@ -84,22 +121,41 @@
 
 .experience-icon {
     flex-shrink: 0;
-    margin-left: 20px;
 }
 
 .experience-icon img {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
     border-radius: 8px;
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 10px;
+    padding: 8px;
+    transition: transform 0.3s ease;
+}
+
+.experience-header:hover .experience-icon img {
+    transform: scale(1.05);
 }
 
 .responsibilities {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    animation: slideDown 0.3s ease-out;
+    overflow: hidden;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        max-height: 2000px;
+        transform: translateY(0);
+    }
 }
 
 .responsibilities li {
@@ -132,27 +188,39 @@
     }
 
     .experience-item {
-        padding: 20px;
-        margin-bottom: 30px;
+        padding: 15px;
+        margin-bottom: 15px;
     }
 
     .experience-header {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
-    .experience-icon {
-        margin-left: 0;
-        margin-top: 15px;
-        text-align: center;
+    .experience-title-section {
+        flex-basis: 100%;
+        margin-bottom: 10px;
+    }
+
+    .experience-right {
+        justify-content: flex-end;
+        width: 100%;
+        gap: 10px;
     }
 
     .experience-icon img {
-        width: 60px;
-        height: 60px;
+        width: 45px;
+        height: 45px;
+    }
+
+    .expand-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9em;
     }
 
     .experience-item h3 {
-        font-size: 1.4em;
+        font-size: 1.3em;
     }
 
     .company-info {

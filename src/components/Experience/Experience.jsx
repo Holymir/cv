@@ -1,12 +1,24 @@
 // src/components/Experience/Experience.jsx
 
-import React from "react";
+import React, { useState } from "react";
 import "./Experience.css";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import limechainIcon from "../../assets/limechain.png";
 import netinfoIcon from "../../assets/netinfo-icon.png";
 import nova from "../../assets/nova.webp";
 
 function Experience() {
+    // State to track which experiences are expanded (default: first one expanded)
+    const [expandedItems, setExpandedItems] = useState([0]);
+
+    const toggleExpand = (index) => {
+        setExpandedItems(prev =>
+            prev.includes(index)
+                ? prev.filter(i => i !== index)
+                : [...prev, index]
+        );
+    };
+
     const experiences = [
         {
             title: "Blockchain & Java Developer",
@@ -73,32 +85,48 @@ function Experience() {
             <div className="container">
                 <h2 className="section-title">Professional Experience</h2>
                 <div className="experience-timeline">
-                    {experiences.map((exp, index) => (
-                        <div key={index} className="experience-item">
-                            <div className="experience-header">
-                                <div className="experience-title-section">
-                                    <h3>{exp.title}</h3>
-                                    <div className="company-info">
-                                        <span className="company-name">{exp.company}</span>
-                                        {exp.companyDescription && (
-                                            <span className="company-description"> - {exp.companyDescription}</span>
+                    {experiences.map((exp, index) => {
+                        const isExpanded = expandedItems.includes(index);
+                        return (
+                            <div key={index} className={`experience-item ${isExpanded ? 'expanded' : 'collapsed'}`}>
+                                <div
+                                    className="experience-header"
+                                    onClick={() => toggleExpand(index)}
+                                    role="button"
+                                    tabIndex={0}
+                                    onKeyPress={(e) => e.key === 'Enter' && toggleExpand(index)}
+                                >
+                                    <div className="experience-title-section">
+                                        <h3>{exp.title}</h3>
+                                        <div className="company-info">
+                                            <span className="company-name">{exp.company}</span>
+                                            {exp.companyDescription && (
+                                                <span className="company-description"> - {exp.companyDescription}</span>
+                                            )}
+                                        </div>
+                                        <p className="period">{exp.period}</p>
+                                    </div>
+                                    <div className="experience-right">
+                                        {exp.icon && (
+                                            <div className="experience-icon">
+                                                <img src={exp.icon} alt={exp.company} />
+                                            </div>
                                         )}
+                                        <div className="expand-icon">
+                                            {isExpanded ? <FaChevronUp /> : <FaChevronDown />}
+                                        </div>
                                     </div>
-                                    <p className="period">{exp.period}</p>
                                 </div>
-                                {exp.icon && (
-                                    <div className="experience-icon">
-                                        <img src={exp.icon} alt={exp.company} />
-                                    </div>
+                                {isExpanded && (
+                                    <ul className="responsibilities">
+                                        {exp.responsibilities.map((resp, idx) => (
+                                            <li key={idx}>{resp}</li>
+                                        ))}
+                                    </ul>
                                 )}
                             </div>
-                            <ul className="responsibilities">
-                                {exp.responsibilities.map((resp, idx) => (
-                                    <li key={idx}>{resp}</li>
-                                ))}
-                            </ul>
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
             </div>
         </section>
