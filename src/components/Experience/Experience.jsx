@@ -12,7 +12,7 @@ function Experience() {
             title: "Blockchain & Java Developer",
             company: "MM Fintech",
             companyDescription: "Financial Technology Solutions",
-            period: "Nov 2024 - Present (2 months)",
+            period: "Nov 2024 - Present (1 year)",
             icon: null, // Add MM Fintech logo if available
             responsibilities: [
                 "Built and optimized backend services using Java Spring Boot framework for high-performance transaction processing",
