@@ -1,0 +1,55 @@
+/* src/components/AnimatedSection.css */
+
+.animated-section {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animated-section.visible {
+    opacity: 1;
+}
+
+/* Fade Up Animation */
+.animated-section.fade-up {
+    transform: translateY(30px);
+}
+
+.animated-section.fade-up.visible {
+    transform: translateY(0);
+}
+
+/* Fade In Animation */
+.animated-section.fade-in {
+    transform: none;
+}
+
+.animated-section.fade-in.visible {
+    transform: none;
+}
+
+/* Fade Left Animation */
+.animated-section.fade-left {
+    transform: translateX(30px);
+}
+
+.animated-section.fade-left.visible {
+    transform: translateX(0);
+}
+
+/* Fade Right Animation */
+.animated-section.fade-right {
+    transform: translateX(-30px);
+}
+
+.animated-section.fade-right.visible {
+    transform: translateX(0);
+}
+
+/* Scale Animation */
+.animated-section.scale {
+    transform: scale(0.9);
+}
+
+.animated-section.scale.visible {
+    transform: scale(1);
+}

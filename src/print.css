@@ -1,0 +1,130 @@
+/* Print Styles for Resume Download/Print */
+
+@media print {
+    /* Hide elements not needed in print */
+    .header-nav,
+    .scroll-to-top,
+    .download-resume-btn,
+    .skip-link,
+    .expand-icon,
+    footer {
+        display: none !important;
+    }
+
+    /* Ensure all sections are visible in print */
+    .animated-section {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    /* Expand all experience items */
+    .experience-item {
+        opacity: 1 !important;
+        background-color: rgba(40, 40, 40, 0.1) !important;
+    }
+
+    .responsibilities {
+        display: block !important;
+        opacity: 1 !important;
+        max-height: none !important;
+    }
+
+    /* Compact header for print */
+    .header {
+        position: relative;
+        padding: 10px 0;
+        box-shadow: none;
+        border-bottom: 2px solid #000;
+        background: white !important;
+        color: black !important;
+    }
+
+    .header * {
+        color: black !important;
+    }
+
+    .header-info h1 {
+        -webkit-text-fill-color: black !important;
+        font-size: 2em;
+    }
+
+    .contact-quick {
+        opacity: 1 !important;
+        max-height: none !important;
+        display: flex !important;
+        font-size: 0.9em;
+    }
+
+    .header-social {
+        display: none;
+    }
+
+    /* Optimize spacing for print */
+    body {
+        background: white;
+        color: black;
+    }
+
+    .App {
+        background: white !important;
+    }
+
+    .App::before {
+        display: none;
+    }
+
+    /* Section styling for print */
+    section {
+        page-break-inside: avoid;
+        background: white !important;
+        color: black !important;
+        padding: 20px 0 !important;
+    }
+
+    section * {
+        color: black !important;
+    }
+
+    .section-title {
+        color: black !important;
+        border-bottom: 2px solid #4CAF50;
+        padding-bottom: 10px;
+    }
+
+    /* Ensure proper page breaks */
+    .experience-item,
+    .certificate-card,
+    .education-card,
+    .language-card {
+        page-break-inside: avoid;
+        background: white !important;
+        border: 1px solid #ddd !important;
+        margin-bottom: 15px;
+    }
+
+    /* Remove unnecessary backgrounds and effects */
+    * {
+        background: white !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    /* Ensure links are visible */
+    a {
+        color: #0066cc !important;
+        text-decoration: underline;
+    }
+
+    /* Skill badges for print */
+    .skill-badge {
+        border: 1px solid #ddd !important;
+        background: white !important;
+        color: black !important;
+    }
+
+    /* Page settings */
+    @page {
+        margin: 1cm;
+        size: A4;
+    }
+}
