@@ -12,11 +12,9 @@ function Experience() {
             title: "Blockchain & Java Developer",
             company: "MM Fintech",
             companyDescription: "Financial Technology Solutions",
-            period: "Sept 2022 - Present",
+            period: "Nov 2024 - Present (2 months)",
             icon: null, // Add MM Fintech logo if available
             responsibilities: [
-                "Developed and maintained blockchain-based financial applications using Solidity and Java",
-                "Implemented smart contracts for decentralized finance (DeFi) solutions in the fintech sector",
                 "Built and optimized backend services using Java Spring Boot framework for high-performance transaction processing",
                 "Integrated blockchain technology with traditional financial systems and APIs",
                 "Collaborated with product and security teams to ensure compliance with financial regulations",
@@ -27,7 +25,7 @@ function Experience() {
             title: "Blockchain Developer",
             company: "LimeChain",
             companyDescription: "Blockchain Consulting and Development",
-            period: "Mar 2018 - Sept 2022",
+            period: "Mar 2018 - Sept 2022 (4 years, 6 months)",
             icon: limechainIcon,
             responsibilities: [
                 "Designed and implemented blockchain protocols and smart contract architectures for enterprise clients, ensuring scalability and security",
@@ -42,7 +40,7 @@ function Experience() {
             title: "Head of Advertising Operations",
             company: "NetInfo",
             companyDescription: "Bulgaria's Largest Online Media",
-            period: "Mar 2016 - Mar 2018",
+            period: "Mar 2016 - Mar 2018 (2 years)",
             icon: nova,
             responsibilities: [
                 "Led and mentored a team of 8+ advertising operations executives, improving team efficiency by 40%",
@@ -57,7 +55,7 @@ function Experience() {
             title: "Advertising Operations Executive",
             company: "NetInfo",
             companyDescription: "Bulgaria's Largest Online Media",
-            period: "Jan 2011 - Mar 2016",
+            period: "Jan 2011 - Mar 2016 (5 years, 2 months)",
             icon: netinfoIcon,
             responsibilities: [
                 "Managed end-to-end digital advertising campaigns across multiple platforms including social media, search engines, and programmatic display",

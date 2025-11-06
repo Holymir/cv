@@ -28,7 +28,7 @@ function Skills() {
         {
             category: "Programming Languages",
             skills: [
-                { name: "Java", level: "expert" },
+                { name: "Java", level: "intermediate" },
                 { name: "JavaScript", level: "advanced" },
                 { name: "TypeScript", level: "advanced" },
                 { name: "Go", level: "intermediate" },
@@ -38,7 +38,7 @@ function Skills() {
         {
             category: "Backend & Frontend",
             skills: [
-                { name: "Spring Boot", level: "expert" },
+                { name: "Spring Boot", level: "intermediate" },
                 { name: "React", level: "intermediate" },
                 { name: "Vue.js", level: "intermediate" },
                 { name: "REST APIs", level: "advanced" },

@@ -16,7 +16,7 @@ function About() {
                     <div className="about-text">
                         <div className="about-summary">
                             <p className="highlight">
-                                Senior Blockchain Developer with 6+ years of specialized experience in smart contract development,
+                                Blockchain Developer with 6+ years of specialized experience in smart contract development,
                                 security auditing, and decentralized application architecture.
                             </p>
                         </div>
