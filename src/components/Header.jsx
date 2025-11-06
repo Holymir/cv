@@ -1,21 +1,37 @@
 // src/components/Header.js
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Header.css";
 import {FaEnvelope, FaLinkedin, FaGithub, FaMapMarkerAlt, FaPhone} from "react-icons/fa";
 
 function Header() {
     const [scrolled, setScrolled] = useState(false);
+    const lastScrollY = useRef(0);
+    const ticking = useRef(false);
 
     useEffect(() => {
         const handleScroll = () => {
-            const isScrolled = window.scrollY > 50;
-            if (isScrolled !== scrolled) {
-                setScrolled(isScrolled);
+            lastScrollY.current = window.scrollY;
+
+            if (!ticking.current) {
+                window.requestAnimationFrame(() => {
+                    const scrollY = lastScrollY.current;
+
+                    // Add hysteresis: different thresholds for scrolling down vs up
+                    // This prevents bouncing at the threshold
+                    if (scrollY > 100 && !scrolled) {
+                        setScrolled(true);
+                    } else if (scrollY < 50 && scrolled) {
+                        setScrolled(false);
+                    }
+
+                    ticking.current = false;
+                });
+                ticking.current = true;
             }
         };
 
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
     }, [scrolled]);
 
