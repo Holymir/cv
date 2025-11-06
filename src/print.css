@@ -7,6 +7,7 @@
     .download-resume-btn,
     .skip-link,
     .expand-icon,
+    .experience-icon,
     footer {
         display: none !important;
     }
@@ -17,42 +18,44 @@
         transform: none !important;
     }
 
-    /* Expand all experience items */
-    .experience-item {
-        opacity: 1 !important;
-        background-color: rgba(40, 40, 40, 0.1) !important;
-    }
-
-    .responsibilities {
-        display: block !important;
-        opacity: 1 !important;
-        max-height: none !important;
-    }
-
-    /* Compact header for print */
+    /* Compact header for print - trim spacing */
     .header {
         position: relative;
-        padding: 10px 0;
+        padding: 5px 0 10px 0 !important;
         box-shadow: none;
         border-bottom: 2px solid #000;
         background: white !important;
         color: black !important;
+        margin-bottom: 10px !important;
     }
 
     .header * {
         color: black !important;
     }
 
+    .header-main {
+        margin-bottom: 8px !important;
+    }
+
     .header-info h1 {
         -webkit-text-fill-color: black !important;
-        font-size: 2em;
+        font-size: 1.8em !important;
+        margin-bottom: 4px !important;
+    }
+
+    .header-info .title {
+        font-size: 1.1em !important;
+        margin-bottom: 6px !important;
+        opacity: 1 !important;
+        max-height: none !important;
     }
 
     .contact-quick {
         opacity: 1 !important;
         max-height: none !important;
         display: flex !important;
-        font-size: 0.9em;
+        font-size: 0.85em !important;
+        margin-bottom: 0 !important;
     }
 
     .header-social {
@@ -73,12 +76,18 @@
         display: none;
     }
 
-    /* Section styling for print */
+    main {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Section styling for print - reduce spacing */
     section {
         page-break-inside: avoid;
         background: white !important;
         color: black !important;
-        padding: 20px 0 !important;
+        padding: 15px 0 10px 0 !important;
+        margin-bottom: 10px !important;
     }
 
     section * {
@@ -88,18 +97,110 @@
     .section-title {
         color: black !important;
         border-bottom: 2px solid #4CAF50;
-        padding-bottom: 10px;
+        padding-bottom: 8px !important;
+        margin-bottom: 15px !important;
+        font-size: 1.8em !important;
     }
 
-    /* Ensure proper page breaks */
-    .experience-item,
+    .container {
+        padding: 0 15px !important;
+    }
+
+    /* CRITICAL: Force ALL experience items to be expanded */
+    .experience-item {
+        opacity: 1 !important;
+        background-color: white !important;
+        border: 1px solid #ddd !important;
+        margin-bottom: 12px !important;
+        padding: 15px !important;
+        page-break-inside: avoid;
+    }
+
+    /* Remove collapsed class effects */
+    .experience-item.collapsed {
+        opacity: 1 !important;
+        background-color: white !important;
+    }
+
+    /* Force expanded state */
+    .experience-item.expanded {
+        opacity: 1 !important;
+        background-color: white !important;
+    }
+
+    /* CRITICAL: Always show responsibilities */
+    .responsibilities {
+        display: block !important;
+        opacity: 1 !important;
+        max-height: none !important;
+        animation: none !important;
+        padding: 0 !important;
+        margin: 10px 0 0 0 !important;
+    }
+
+    .responsibilities li {
+        font-size: 0.9em !important;
+        line-height: 1.5 !important;
+        margin-bottom: 6px !important;
+        padding-left: 20px !important;
+        color: black !important;
+    }
+
+    .responsibilities li:before {
+        color: #4CAF50 !important;
+    }
+
+    /* Experience header spacing */
+    .experience-header {
+        margin-bottom: 10px !important;
+        cursor: default !important;
+    }
+
+    .experience-item.collapsed .experience-header {
+        margin-bottom: 10px !important;
+    }
+
+    .experience-item.expanded .experience-header {
+        margin-bottom: 10px !important;
+    }
+
+    .experience-item h3 {
+        font-size: 1.3em !important;
+        margin-bottom: 4px !important;
+        color: black !important;
+    }
+
+    .company-info {
+        font-size: 1em !important;
+        margin-bottom: 4px !important;
+        color: black !important;
+    }
+
+    .period {
+        font-size: 0.9em !important;
+        color: #555 !important;
+        margin: 0 !important;
+    }
+
+    /* Other sections - compact spacing */
     .certificate-card,
     .education-card,
     .language-card {
         page-break-inside: avoid;
         background: white !important;
         border: 1px solid #ddd !important;
-        margin-bottom: 15px;
+        margin-bottom: 10px !important;
+        padding: 12px !important;
+    }
+
+    .skill-category {
+        margin-bottom: 12px !important;
+    }
+
+    .skills-grid,
+    .certificates-grid,
+    .languages-grid {
+        gap: 10px !important;
     }
 
     /* Remove unnecessary backgrounds and effects */
@@ -115,16 +216,24 @@
         text-decoration: underline;
     }
 
+    .contact-link {
+        color: black !important;
+        text-decoration: none !important;
+    }
+
     /* Skill badges for print */
     .skill-badge {
         border: 1px solid #ddd !important;
         background: white !important;
         color: black !important;
+        padding: 4px 10px !important;
+        margin: 3px !important;
+        font-size: 0.85em !important;
     }
 
     /* Page settings */
     @page {
-        margin: 1cm;
+        margin: 1.5cm 1cm;
         size: A4;
     }
 }
