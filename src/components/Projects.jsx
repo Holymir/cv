@@ -10,8 +10,8 @@ function Projects() {
         {
             name: "SentiFi AI",
             tagline: "Cryptocurrency Sentiment Intelligence Platform",
-            description: "Full-stack AI-powered platform that aggregates and analyzes cryptocurrency news sentiment in real-time. Leverages OpenAI GPT-3.5 for intelligent classification, helping traders and investors understand market dynamics through data-driven insights.",
-            technologies: ["React", "Node.js", "Express", "PostgreSQL", "Prisma ORM", "OpenAI GPT-3.5", "Tailwind CSS", "Recharts", "Vite"],
+            description: "Full-stack AI-powered platform that aggregates and analyzes cryptocurrency news sentiment in real-time. Leverages OpenAI GPT-5 for intelligent classification, helping traders and investors understand market dynamics through data-driven insights.",
+            technologies: ["React", "Node.js", "Express", "PostgreSQL", "Prisma ORM", "OpenAI GPT-5", "Tailwind CSS", "Recharts", "Vite"],
             features: [
                 "Automated hourly news aggregation from CoinDesk, CoinTelegraph, and other major sources",
                 "AI-powered sentiment analysis classifying articles as Bullish, Bearish, or Neutral",
