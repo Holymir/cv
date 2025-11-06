@@ -1,10 +1,8 @@
 import Header from './components/Header';
 import About from './components/About';
-import Limechain from './components/Experience/Limechain';
-import NetinfoHead from './components/Experience/NetinfoHead';
-import Netinfo from './components/Experience/Netinfo';
+import Experience from './components/Experience/Experience';
 import Skills from './components/Skills';
-import CmdPromptComponent from './components/Footer';
+import Footer from './components/Footer';
 import Certificates from './components/Certificates';
 import './App.css';
 
@@ -13,12 +11,10 @@ function App() {
     <div className="App">
       <Header></Header>
       <About></About>
-      <Limechain></Limechain>
-      <NetinfoHead></NetinfoHead>
-      <Netinfo></Netinfo>
+      <Experience></Experience>
       <Skills></Skills>
       <Certificates />
-      <CmdPromptComponent />
+      <Footer />
     </div>
   );
 }

@@ -1,48 +1,46 @@
 // src/components/Header.js
 
 import React from "react";
-import "./Header.css"; // Importing the CSS file for styling
-
-import "./Contacts.css";
-import {FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub} from "react-icons/fa";
+import "./Header.css";
+import {FaEnvelope, FaLinkedin, FaGithub, FaMapMarkerAlt, FaPhone} from "react-icons/fa";
 
 function Header() {
     return (
-        <header className={"header"}>
-            <div className='container'>
-                <h1>Ventsislav Tsochev</h1>
-                <p>Blockchain Developer</p>
-                <nav>
-                    <a href='#about'>About</a>
-                    <a href='#experience'>Experience</a>
-                    <a href='#skills'>Skills & Technologies</a>
-                    <a href='#certificates'>Certificates</a>
-                </nav>
-            </div>
-            <div className='contacts'>
-                <div className='contact-list'>
-                    <div className='contact-item'>
-                        <FaEnvelope />
-                        <p>Email: Ven.Tsochev@gmail.com</p>
+        <header className="header">
+            <div className="header-container">
+                <div className="header-main">
+                    <div className="header-info">
+                        <h1>Ventsislav Tsochev</h1>
+                        <p className="title">Senior Blockchain Developer</p>
+                        <div className="contact-quick">
+                            <a href="mailto:Ven.Tsochev@gmail.com" className="contact-link">
+                                <FaEnvelope /> Ven.Tsochev@gmail.com
+                            </a>
+                            <span className="separator">|</span>
+                            <a href="tel:+359882800508" className="contact-link">
+                                <FaPhone /> +359 882 800 508
+                            </a>
+                            <span className="separator">|</span>
+                            <span className="contact-link">
+                                <FaMapMarkerAlt /> Sofia, Bulgaria
+                            </span>
+                        </div>
                     </div>
-                    <div className='contact-item'>
-                        <FaPhone />
-                        <p>Phone: +359 (882) 800-508</p>
+                    <div className="header-social">
+                        <a href="https://linkedin.com/in/ventsislav-tsochev" target="_blank" rel="noopener noreferrer" className="social-link">
+                            <FaLinkedin />
+                        </a>
+                        <a href="https://github.com/Holymir" target="_blank" rel="noopener noreferrer" className="social-link">
+                            <FaGithub />
+                        </a>
                     </div>
-                    <div className='contact-item'>
-                        <FaMapMarkerAlt />
-                        <p>Sofia, Bulgaria</p>
-                    </div>
-                    <div className='contact-item'>
-                        <FaLinkedin />
-                        <p>linkedin.com/in/ventsislav-tsochev</p>
-                    </div>
-                    <div className='contact-item'>
-                        <FaGithub />
-                        <p>github.com/Holymir</p>
-                    </div>
-                    {/* Add more contact information as needed */}
                 </div>
+                <nav className="header-nav">
+                    <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#certificates">Certificates</a>
+                </nav>
             </div>
         </header>
     );

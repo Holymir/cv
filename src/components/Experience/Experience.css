@@ -1,93 +1,166 @@
 /* src/components/Experience.css */
 
 .experience {
-    background-color: rgba(28, 28, 28, 0.8); /* Semi-transparent background */
+    background-color: rgba(28, 28, 28, 0.95);
     color: #fff;
-    padding: 40px 0;
-    backdrop-filter: blur(1px); /* Optional blurred background effect */
-    margin-bottom: 50px; /* Add space below the Experience section */
+    padding: 60px 0;
+    backdrop-filter: blur(2px);
+    margin-bottom: 50px;
     scroll-margin: 82px;
 }
 
 .experience .container {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
-    max-width: 960px;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 20px;
 }
 
-.experience-content {
-    flex: 0 0 60%; /* Adjust as needed */
+.experience .section-title {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #4CAF50;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
-.experience h2 {
-    font-size: 2.2em;
-    margin-bottom: 20px;
-}
-
-.experience-item h3 {
-    font-size: 1.6em;
-    margin-bottom: 5px;
-}
-
-.experience-item p {
-    font-size: 1.1em;
-    margin-bottom: 10px;
-}
-
-.experience-item ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.experience-item ul li {
-    font-size: 1em;
-    line-height: 1.6;
-    margin-bottom: 10px;
+.experience-timeline {
     position: relative;
 }
 
-.experience-item ul li:before {
-    content: '•';
-    position: absolute;
-    left: -20px;
-    color: #4CAF50; /* Neon green bullet points */
+.experience-item {
+    margin-bottom: 50px;
+    padding: 30px;
+    background-color: rgba(40, 40, 40, 0.6);
+    border-radius: 12px;
+    border-left: 4px solid #4CAF50;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.experience-abstract {
-    /* flex: 0 0 30%; */
+.experience-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 8px 24px rgba(76, 175, 80, 0.2);
+}
+
+.experience-header {
     display: flex;
-    flex-direction: row;
-    /* align-items: end; */
-    justify-content: center;
-    /* margin-bottom: 75px; */
-    /* margin-right: 0; */
-
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
 }
 
-.abstract-icon {
-    max-width: 100px; /* Adjust size as needed */
-    margin-top: 5em;
+.experience-title-section {
+    flex: 1;
 }
 
-.experience-abstract p {
+.experience-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 8px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.company-info {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    color: #00ccff;
+}
+
+.company-name {
+    font-weight: 600;
+}
+
+.company-description {
+    color: #aaa;
+    font-style: italic;
+}
+
+.period {
     font-size: 1em;
-    text-align: center;
-    color: #4CAF50; /* Neon green text for emphasis */
+    color: #4CAF50;
+    font-weight: 500;
+    margin: 0;
+}
+
+.experience-icon {
+    flex-shrink: 0;
+    margin-left: 20px;
+}
+
+.experience-icon img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+}
+
+.responsibilities {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.responsibilities li {
+    font-size: 1.05em;
+    line-height: 1.7;
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    color: #ddd;
+}
+
+.responsibilities li:before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: #4CAF50;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .experience .container {
+    .experience {
+        padding: 40px 0;
+    }
+
+    .experience .section-title {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+
+    .experience-item {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .experience-header {
         flex-direction: column;
+    }
+
+    .experience-icon {
+        margin-left: 0;
+        margin-top: 15px;
         text-align: center;
     }
 
-    .experience-content, .experience-abstract {
-        flex: none;
-        width: 100%;
-        margin-bottom: 20px;
+    .experience-icon img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .experience-item h3 {
+        font-size: 1.4em;
+    }
+
+    .company-info {
+        font-size: 1em;
+    }
+
+    .responsibilities li {
+        font-size: 0.95em;
+        padding-left: 20px;
     }
 }

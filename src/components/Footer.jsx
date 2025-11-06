@@ -1,43 +1,27 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import "./Footer.css";
+import { FaHeart, FaCode } from "react-icons/fa";
 
-const CmdPromptComponent = () => {
-    const [code, setCode] = useState("");
-    const solidityCode = `if [ "$youLikeMe" = true ]; then
-        call
-        sendMail
-    else
-        hugs
-    fi`;
+const Footer = () => {
+    const currentYear = new Date().getFullYear();
 
-    useEffect(() => {
-        function startAnimation() {
-            let i = 0;
-            const interval = setInterval(() => {
-                setCode(solidityCode.substring(0, i));
-                i++;
-                if (i > solidityCode.length) {
-                    clearInterval(interval);
-                    setTimeout(() => {
-                        setCode("");
-                        startAnimation();
-                    }, 2000); // Clear console after 2 seconds
-                }
-            }, 50);
-
-            return () => clearInterval(interval);
-        }
-        startAnimation();
-    }, [solidityCode]);
     return (
-        <div className='cmd-prompt'>
-            <div className='cmd-body'>
-                <pre>
-                    <code>{code}</code>
-                </pre>
+        <footer className="footer">
+            <div className="footer-container">
+                <div className="footer-content">
+                    <p className="footer-text">
+                        Made with <FaHeart className="heart-icon" /> and <FaCode className="code-icon" /> by Ventsislav Tsochev
+                    </p>
+                    <p className="footer-copyright">
+                        © {currentYear} All rights reserved
+                    </p>
+                </div>
+                <div className="footer-message">
+                    <p>Let's build something amazing together!</p>
+                </div>
             </div>
-        </div>
+        </footer>
     );
 };
 
-export default CmdPromptComponent;
+export default Footer;

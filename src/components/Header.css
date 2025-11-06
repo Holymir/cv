@@ -2,93 +2,197 @@
 .header {
     position: sticky;
     top: 0;
-    z-index: 100; /* Ensure the header is above other content */
-    background-color: rgb(0, 0, 0, 0.95); /* Background color when header is fixed */
-    color: #fff; /* Light text */
-    padding: 5px;
-    overflow: hidden; /* Ensure no overflow for asymmetric design */
-    border-bottom: 1px solid #333; /* Subtle border for a sleek look */
+    z-index: 100;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.98) 0%, rgba(20, 20, 20, 0.98) 100%);
+    color: #fff;
+    padding: 20px 0;
+    border-bottom: 2px solid #4CAF50;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
 }
 
-.header .container {
+.header-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.header-info h1 {
+    font-size: 2.5em;
+    margin: 0 0 8px 0;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    background: linear-gradient(135deg, #fff 0%, #4CAF50 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.header-info .title {
+    font-size: 1.3em;
+    color: #00ccff;
+    margin: 0 0 12px 0;
+    font-weight: 500;
+}
+
+.contact-quick {
     display: flex;
     align-items: center;
-    max-width: 960px;
-    margin: 0 auto;
-    position: relative; /* For positioning abstract elements */
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 0.95em;
+    color: #aaa;
 }
 
-.header h1 {
-    font-size: 2em; /* Larger size for a bold look */
-    text-align: left;
-    flex: 1;
-    position: relative; /* For abstract design elements */
-    z-index: 2; /* Above the abstract shapes */
-}
-
-.header p {
-    font-size: 1.4em; /* Slightly larger for emphasis */
-    text-align: center;
-    flex: 1;
-    z-index: 2; /* Above the abstract shapes */
-}
-
-.header nav {
-    display: flex;
-    flex: 1;
-    justify-content: flex-end;
-    z-index: 2; /* Above the abstract shapes */
-}
-
-.header nav a {
-    color: #4CAF50; /* Neon green color for links */
-    margin-left: 20px;
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #aaa;
     text-decoration: none;
-    font-size: 1em;
-    transition: color 0.3s; /* Smooth transition for hover effect */
+    transition: color 0.3s ease;
 }
 
-.header nav a:hover {
-    color: #7CFC00; /* Brighter green on hover */
-    text-decoration: underline;
+.contact-link:hover {
+    color: #4CAF50;
 }
 
-/* Abstract Design Elements */
-.header::before {
+.contact-link svg {
+    font-size: 0.9em;
+}
+
+.separator {
+    color: #555;
+    margin: 0 4px;
+}
+
+.header-social {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(76, 175, 80, 0.1);
+    border-radius: 50%;
+    color: #4CAF50;
+    font-size: 1.4em;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.social-link:hover {
+    background-color: #4CAF50;
+    color: #000;
+    border-color: #4CAF50;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
+
+.header-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    border-top: 1px solid rgba(76, 175, 80, 0.2);
+    padding-top: 15px;
+}
+
+.header-nav a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 1.05em;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.header-nav a:hover {
+    color: #4CAF50;
+    background-color: rgba(76, 175, 80, 0.1);
+}
+
+.header-nav a::after {
     content: '';
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 50%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(255,255,255,0.1), rgba(0,0,0,0));
-    transform: rotate(-25deg);
-    z-index: 1; /* Behind text and nav */
+    width: 0;
+    height: 2px;
+    background-color: #4CAF50;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.header-nav a:hover::after {
+    width: 80%;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .header {
-        max-height: 10em;
+        padding: 15px 0;
     }
 
-    .header .container {
+    .header-main {
         flex-direction: column;
-        text-align: center;
+        align-items: flex-start;
+        margin-bottom: 15px;
     }
 
-    .header p {
+    .header-info h1 {
+        font-size: 1.8em;
+    }
+
+    .header-info .title {
+        font-size: 1.1em;
+    }
+
+    .contact-quick {
+        font-size: 0.85em;
+        margin-bottom: 12px;
+    }
+
+    .contact-quick .separator {
         display: none;
     }
-    
-    .contact-item {
-        display: none;
+
+    .contact-link {
+        flex-basis: 100%;
     }
 
-    .header nav {
-        justify-content: center;
+    .header-social {
+        margin-top: 10px;
+        gap: 12px;
     }
 
-    .header nav a {
-        margin: 0 10px;
+    .social-link {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
+    }
+
+    .header-nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        padding-top: 12px;
+    }
+
+    .header-nav a {
+        font-size: 0.95em;
+        padding: 6px 12px;
     }
 }
