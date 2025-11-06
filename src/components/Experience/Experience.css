@@ -141,8 +141,20 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
-    animation: slideDown 0.3s ease-out;
     overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.responsibilities.hide {
+    max-height: 0;
+    opacity: 0;
+    margin: 0;
+}
+
+.responsibilities.show {
+    max-height: 2000px;
+    opacity: 1;
+    animation: slideDown 0.3s ease-out;
 }
 
 @keyframes slideDown {

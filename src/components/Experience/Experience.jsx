@@ -117,13 +117,11 @@ function Experience() {
                                         </div>
                                     </div>
                                 </div>
-                                {isExpanded && (
-                                    <ul className="responsibilities">
-                                        {exp.responsibilities.map((resp, idx) => (
-                                            <li key={idx}>{resp}</li>
-                                        ))}
-                                    </ul>
-                                )}
+                                <ul className={`responsibilities ${isExpanded ? 'show' : 'hide'}`}>
+                                    {exp.responsibilities.map((resp, idx) => (
+                                        <li key={idx}>{resp}</li>
+                                    ))}
+                                </ul>
                             </div>
                         );
                     })}

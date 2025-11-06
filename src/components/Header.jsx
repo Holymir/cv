@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import "./Header.css";
-import {FaEnvelope, FaLinkedin, FaGithub, FaMapMarkerAlt, FaPhone} from "react-icons/fa";
+import {FaEnvelope, FaLinkedin, FaGithub, FaMapMarkerAlt, FaPhone, FaDownload} from "react-icons/fa";
 
 function Header() {
     const [scrolled, setScrolled] = useState(false);
@@ -79,12 +79,16 @@ function Header() {
                         <a href="https://github.com/Holymir" target="_blank" rel="noopener noreferrer" className="social-link">
                             <FaGithub />
                         </a>
+                        <button onClick={() => window.print()} className="download-resume-btn" title="Print / Download Resume">
+                            <FaDownload /> <span className="btn-text">Resume</span>
+                        </button>
                     </div>
                 </div>
                 <nav className="header-nav">
                     <a href="#about">About</a>
                     <a href="#experience">Experience</a>
                     <a href="#skills">Skills</a>
+                    <a href="#education">Education</a>
                     <a href="#certificates">Certificates</a>
                 </nav>
             </div>

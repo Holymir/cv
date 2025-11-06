@@ -113,6 +113,46 @@
 .header-social {
     display: flex;
     gap: 15px;
+    align-items: center;
+}
+
+.download-resume-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.header.scrolled .download-resume-btn {
+    padding: 6px 14px;
+    font-size: 0.9em;
+}
+
+.download-resume-btn:hover {
+    background: linear-gradient(135deg, #45a049, #4CAF50);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.5);
+}
+
+.download-resume-btn:active {
+    transform: translateY(0);
+}
+
+.download-resume-btn .btn-text {
+    transition: all 0.3s ease;
+}
+
+.header.scrolled .download-resume-btn .btn-text {
+    display: none;
 }
 
 .social-link {
