@@ -11,7 +11,7 @@ function About() {
                 <h2 className="section-title">About Me</h2>
                 <div className="about-content">
                     <div className="about-image">
-                        <img src={profileImage} alt="Ventsislav Tsochev" className="profile-img" />
+                        <img src={profileImage} alt="Ven Tsochev" className="profile-img" />
                     </div>
                     <div className="about-text">
                         <div className="about-summary">

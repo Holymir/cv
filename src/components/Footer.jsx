@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="footer-container">
                 <div className="footer-content">
                     <p className="footer-text">
-                        Made with <FaHeart className="heart-icon" /> and <FaCode className="code-icon" /> by Ventsislav Tsochev
+                        Made with <FaHeart className="heart-icon" /> and <FaCode className="code-icon" /> by Ven Tsochev
                     </p>
                     <p className="footer-copyright">
                         © {currentYear} All rights reserved
