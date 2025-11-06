@@ -7,32 +7,48 @@ import {FaEnvelope, FaLinkedin, FaGithub, FaMapMarkerAlt, FaPhone} from "react-i
 function Header() {
     const [scrolled, setScrolled] = useState(false);
     const lastScrollY = useRef(0);
-    const ticking = useRef(false);
+    const timeoutRef = useRef(null);
+    const lastChangeTime = useRef(0);
 
     useEffect(() => {
         const handleScroll = () => {
-            lastScrollY.current = window.scrollY;
+            const currentScrollY = window.scrollY;
+            const now = Date.now();
 
-            if (!ticking.current) {
-                window.requestAnimationFrame(() => {
-                    const scrollY = lastScrollY.current;
-
-                    // Add hysteresis: different thresholds for scrolling down vs up
-                    // This prevents bouncing at the threshold
-                    if (scrollY > 100 && !scrolled) {
-                        setScrolled(true);
-                    } else if (scrollY < 50 && scrolled) {
-                        setScrolled(false);
-                    }
-
-                    ticking.current = false;
-                });
-                ticking.current = true;
+            // Prevent rapid state changes (cooldown period of 300ms)
+            if (now - lastChangeTime.current < 300) {
+                return;
             }
+
+            // Clear any pending timeout
+            if (timeoutRef.current) {
+                clearTimeout(timeoutRef.current);
+            }
+
+            // Debounce the scroll handling
+            timeoutRef.current = setTimeout(() => {
+                // Large hysteresis: collapse at 150px, expand at 30px
+                // This creates a 120px buffer zone
+                if (currentScrollY > 150 && !scrolled) {
+                    setScrolled(true);
+                    lastChangeTime.current = Date.now();
+                } else if (currentScrollY < 30 && scrolled) {
+                    setScrolled(false);
+                    lastChangeTime.current = Date.now();
+                }
+
+                lastScrollY.current = currentScrollY;
+            }, 50); // 50ms debounce
         };
 
         window.addEventListener('scroll', handleScroll, { passive: true });
-        return () => window.removeEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            if (timeoutRef.current) {
+                clearTimeout(timeoutRef.current);
+            }
+        };
     }, [scrolled]);
 
     return (
