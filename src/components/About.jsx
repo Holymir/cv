@@ -22,33 +22,26 @@ function About() {
               </p>
             </div>
             <p>
-              My journey into technology began in an unexpected place—working as
-              an Advertising Operations Executive at Bulgaria's largest online
-              media company. While managing digital campaigns and leading a
-              team, I discovered a deep fascination for the technical side of
-              things through my daily collaboration with developers.
+              I started in tech working as an Advertising Operations Executive
+              at Bulgaria's largest online media company. While managing
+              campaigns and leading a team, I got interested in the technical
+              side through working with developers.
             </p>
             <p>
-              This passion led me to make a bold career transition in 2017. I
-              enrolled in intensive programming courses and quickly progressed
-              through fundamentals to advanced software development. The turning
-              point came when I participated in SoftUni's Blockchain Dev Camp—a
-              rigorous, full-time program that introduced me to the
-              transformative potential of blockchain technology.
+              In 2017, I made the switch to programming. I completed SoftUni's
+              Blockchain Dev Camp and got hooked on blockchain technology.
             </p>
             <p>
-              Since then, I've dedicated my career to mastering Blockchain and
-              Web3 development, with a particular focus on Solidity, smart
-              contract security, and gas optimization. I've architected and
-              deployed 10+ production-ready smart contracts, conducted security
-              audits protecting millions in digital assets, and contributed to
-              innovative DeFi protocols and blockchain infrastructures.
+              Since then, I've focused on Solidity development, smart contract
+              security, and building DeFi protocols. I've worked on security
+              audits, gas optimization, and integrating blockchain with
+              traditional financial systems.
             </p>
             <p>
-              What drives me is the intersection of technical excellence and
-              real-world impact. I'm committed to writing secure, efficient, and
-              scalable blockchain solutions that push the boundaries of what's
-              possible in decentralized systems.
+              Currently, I'm working in fintech, bridging crypto assets with
+              traditional finance through exchange integrations and custody
+              solutions. I'm driven by building secure, efficient solutions that
+              actually work in production.
             </p>
           </div>
         </div>
