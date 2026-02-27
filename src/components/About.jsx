@@ -22,14 +22,14 @@ function About() {
                 exchange integrations, and production fintech platform
                 development.
               </p>
+              <p>
+                Background in EVM smart contract development — built a range of
+                DeFi and blockchain solutions including token systems, protocol
+                integrations, and contract security patterns. Combined with
+                hands-on experience leading a team of 10+ in a fast-paced media
+                environment.
+              </p>
             </div>
-            <p>
-              Background in EVM smart contract development — built a range of
-              DeFi and blockchain solutions including token systems, protocol
-              integrations, and contract security patterns. Combined with
-              hands-on experience leading a team of 10+ in a fast-paced media
-              environment.
-            </p>
           </div>
         </div>
       </div>
