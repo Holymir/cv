@@ -16,32 +16,19 @@ function About() {
           <div className="about-text">
             <div className="about-summary">
               <p className="highlight">
-                Web3 & Fintech Developer with 6+ years of specialized experience
-                in smart contract development, security auditing, and
-                decentralized application architecture.
+                Fintech & Blockchain Developer with 6+ years in the industry,
+                specializing in bridging digital assets with traditional
+                financial systems. Currently focused on custodial solutions,
+                exchange integrations, and production fintech platform
+                development.
               </p>
             </div>
             <p>
-              I started in tech working as an Advertising Operations Executive
-              at Bulgaria's largest online media company. While managing
-              campaigns and leading a team, I got interested in the technical
-              side through working with developers.
-            </p>
-            <p>
-              In 2017, I made the switch to programming. I completed SoftUni's
-              Blockchain Dev Camp and got hooked on blockchain technology.
-            </p>
-            <p>
-              Since then, I've focused on Solidity development, smart contract
-              security, and building DeFi protocols. I've worked on security
-              audits, gas optimization, and integrating blockchain with
-              traditional financial systems.
-            </p>
-            <p>
-              Currently, I'm working in fintech, bridging crypto assets with
-              traditional finance through exchange integrations and custody
-              solutions. I'm driven by building secure, efficient solutions that
-              actually work in production.
+              Background in EVM smart contract development — built a range of
+              DeFi and blockchain solutions including token systems, protocol
+              integrations, and contract security patterns. Combined with
+              hands-on experience leading a team of 10+ in a fast-paced media
+              environment.
             </p>
           </div>
         </div>
