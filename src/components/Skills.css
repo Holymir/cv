@@ -33,18 +33,12 @@
     padding: 25px;
     border-radius: 12px;
     border-top: 3px solid #4CAF50;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skill-category:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(76, 175, 80, 0.2);
 }
 
 .category-title {
     font-size: 1.4em;
     margin-bottom: 20px;
-    color: #00ccff;
+    color: #fff;
     font-weight: 600;
     text-align: center;
 }
@@ -57,62 +51,13 @@
 }
 
 .skill-badge {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 12px 18px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    cursor: default;
-    min-width: 100px;
-}
-
-.skill-badge.expert {
-    background: linear-gradient(135deg, rgba(76, 175, 80, 0.3) 0%, rgba(76, 175, 80, 0.15) 100%);
-    border: 2px solid #4CAF50;
-}
-
-.skill-badge.advanced {
-    background: linear-gradient(135deg, rgba(0, 204, 255, 0.3) 0%, rgba(0, 204, 255, 0.15) 100%);
-    border: 2px solid #00ccff;
-}
-
-.skill-badge.intermediate {
-    background: linear-gradient(135deg, rgba(255, 193, 7, 0.3) 0%, rgba(255, 193, 7, 0.15) 100%);
-    border: 2px solid #FFC107;
-}
-
-.skill-badge:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-}
-
-.skill-name {
-    font-size: 1em;
-    font-weight: 600;
-    color: #fff;
-    margin-bottom: 4px;
-    text-align: center;
-}
-
-.skill-level {
-    font-size: 0.75em;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.95em;
     font-weight: 500;
-    opacity: 0.9;
-}
-
-.skill-badge.expert .skill-level {
-    color: #4CAF50;
-}
-
-.skill-badge.advanced .skill-level {
-    color: #00ccff;
-}
-
-.skill-badge.intermediate .skill-level {
-    color: #FFC107;
+    color: #e0e0e0;
+    background-color: rgba(76, 175, 80, 0.12);
+    border: 1px solid rgba(76, 175, 80, 0.3);
 }
 
 /* Responsive Design */
@@ -141,11 +86,7 @@
     }
 
     .skill-badge {
-        padding: 10px 14px;
-        min-width: 85px;
-    }
-
-    .skill-name {
+        padding: 6px 12px;
         font-size: 0.9em;
     }
 }
