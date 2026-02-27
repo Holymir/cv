@@ -57,7 +57,7 @@ function Header() {
                 <div className="header-main">
                     <div className="header-info">
                         <h1>Ven Tsochev</h1>
-                        <p className="title">Blockchain Developer</p>
+                        <p className="title">Fintech & Blockchain Developer</p>
                         <div className="contact-quick">
                             <a href="mailto:Ven.Tsochev@gmail.com" className="contact-link">
                                 <FaEnvelope /> Ven.Tsochev@gmail.com
