@@ -19,7 +19,7 @@ function Experience() {
 
   const experiences = [
     {
-      title: "Blockchain & Java Developer",
+      title: "Fintech & Java Developer",
       company: "MM Fintech",
       companyDescription: "Financial Technology Solutions",
       period: "Nov 2024 - Present (1 year)",
