@@ -26,7 +26,7 @@ function Experience() {
       icon: null, // Add MM Fintech logo if available
       responsibilities: [
         <>Built <strong>Java Spring Boot</strong> microservices for cryptocurrency exchange integrations (<strong>Kraken</strong>, <strong>Binance</strong>), handling high-volume concurrent trading operations with sub-second response times</>,
-        <>Developed <strong>Fireblocks</strong> custody integration with webhook-driven transaction monitoring for secure digital asset transfers across multiple blockchain networks</>,
+        <>Developed <strong>Fireblocks</strong> custody and <strong>FBO</strong> integrations with webhook-driven transaction lifecycle tracking, status reconciliation, and secure digital asset transfers across multiple blockchain networks</>,
         <>Designed concurrent API layer for order execution and real-time market data streaming across multiple exchange platforms</>,
         <>Managed database migrations and <strong>PostgreSQL</strong> query optimization for trading pair configurations and transaction records</>,
       ],
