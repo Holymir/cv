@@ -7,16 +7,8 @@ import "./Languages.css";
 
 function Languages() {
     const languages = [
-        {
-            language: "Bulgarian",
-            level: "Native",
-            proficiency: 100
-        },
-        {
-            language: "English",
-            level: "Professional Working Proficiency",
-            proficiency: 90
-        }
+        { language: "Bulgarian", level: "Native" },
+        { language: "English", level: "Professional Working Proficiency" },
     ];
 
     return (
@@ -31,12 +23,6 @@ function Languages() {
                             <div key={index} className="language-card">
                                 <h3>{lang.language}</h3>
                                 <p className="proficiency-level">{lang.level}</p>
-                                <div className="proficiency-bar">
-                                    <div
-                                        className="proficiency-fill"
-                                        style={{ width: `${lang.proficiency}%` }}
-                                    ></div>
-                                </div>
                             </div>
                         ))}
                     </div>

@@ -40,7 +40,7 @@ const Certificates = () => {
     return (
         <section id="certificates" className="certificates">
             <div className="container">
-                <h2 className="section-title">Education & Certifications</h2>
+                <h2 className="section-title">Certifications</h2>
                 <div className="certificate-grid">
                     {certificates.map((certificate, index) => (
                         <a

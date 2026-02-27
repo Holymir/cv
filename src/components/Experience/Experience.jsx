@@ -19,16 +19,16 @@ function Experience() {
 
   const experiences = [
     {
-      title: "Blockchain & Java Developer",
+      title: "Fintech & Java Developer",
       company: "MM Fintech",
       companyDescription: "Financial Technology Solutions",
       period: "Nov 2024 - Present (1 year)",
       icon: null, // Add MM Fintech logo if available
       responsibilities: [
-        "Built and maintained microservices for cryptocurrency exchange integrations (Kraken, Binance) using Java Spring Boot, handling high-volume concurrent trading operations with sub-second response times",
-        "Developed Fireblocks custody integration with webhook management for secure digital asset transfers and real-time transaction monitoring across blockchain networks",
-        "Implemented concurrent API processing for order execution and market data streaming across multiple exchange platforms",
-        "Managed database migrations and SQL optimization for trading pair configurations and transaction records",
+        <>Built <strong>Java Spring Boot</strong> microservices for cryptocurrency exchange integrations (<strong>Kraken</strong>, <strong>Binance</strong>), handling high-volume concurrent trading operations with sub-second response times</>,
+        <>Developed <strong>Fireblocks</strong> custody and <strong>FBO</strong> integrations with webhook-driven transaction lifecycle tracking, status reconciliation, and secure digital asset transfers across multiple blockchain networks</>,
+        <>Designed concurrent API layer for order execution and real-time market data streaming across multiple exchange platforms</>,
+        <>Managed database migrations and <strong>PostgreSQL</strong> query optimization for trading pair configurations and transaction records</>,
       ],
     },
     {
@@ -38,11 +38,10 @@ function Experience() {
       period: "Mar 2018 - Sept 2022 (4 years, 6 months)",
       icon: limechainIcon,
       responsibilities: [
-        "Developed and deployed smart contract systems on Ethereum, Polygon, and EVM-compatible chains for enterprise clients with high-security requirements",
-        "Built 10+ production smart contracts in Solidity with gas optimization techniques",
-        "Performed security audits and implemented cryptographic protocols (ECDSA, Merkle trees) that identified vulnerabilities protecting $10M+ in digital assets",
-        "Collaborated with product and business teams to build user-focused blockchain applications.",
-        "Set up testing infrastructure using Hardhat and Truffle with CI/CD pipelines.",
+        <>Developed and deployed smart contract systems on <strong>Ethereum</strong>, <strong>Polygon</strong>, and <strong>EVM-compatible chains</strong> for enterprise clients with high-security requirements</>,
+        <>Built 10+ production smart contracts in <strong>Solidity</strong> with gas optimization techniques, reducing on-chain costs for end users</>,
+        <>Performed security audits and implemented cryptographic protocols (<strong>ECDSA</strong>, <strong>Merkle trees</strong>), identifying critical vulnerabilities and protecting <strong>$10M+</strong> in digital assets</>,
+        <>Set up testing and deployment infrastructure using <strong>Hardhat</strong> and <strong>Truffle</strong> with <strong>CI/CD</strong> pipelines</>,
       ],
     },
     {
@@ -52,12 +51,11 @@ function Experience() {
       period: "Mar 2016 - Mar 2018 (2 years)",
       icon: nova,
       responsibilities: [
-        "Managed team of 8+ advertising operations specialists, implementing process optimization and training programs that increased team productivity by 40% and reduced campaign turnaround time by 30%",
-        "Directed $2M+ annual advertising revenue operations across programmatic, display, and video campaigns, consistently exceeding quarterly revenue targets by 15-20%",
-        "Drove data-driven campaign optimization using advanced analytics platforms (Google Analytics, Adobe Analytics), achieving 25% improvement in ROI and 30% increase in conversion rates",
-        "Pioneered automation solutions and workflow tools that streamlined ad trafficking processes, reducing manual tasks by 50% and improving campaign delivery accuracy",
-        "Cultivated strategic partnerships with premium advertising networks, DSPs, and media agencies, expanding revenue channels and securing exclusive inventory deals",
-        "Orchestrated cross-departmental initiatives aligning operations, sales, and product teams, resulting in 20% faster campaign launches and improved stakeholder satisfaction",
+        <>Led a team of <strong>8+ specialists</strong>, implementing process optimization and training programs that increased productivity by 40%</>,
+        <>Directed <strong>$2M+</strong> annual advertising revenue across programmatic, display, and video campaigns, exceeding quarterly targets by 15–20%</>,
+        <>Drove data-driven campaign optimization using <strong>Google Analytics</strong> and <strong>Adobe Analytics</strong>, improving ROI by 25% and conversion rates by 30%</>,
+        <>Built automation solutions that streamlined ad trafficking, reducing manual tasks by 50%</>,
+        <>Managed strategic partnerships with advertising networks, <strong>DSPs</strong>, and media agencies, expanding revenue channels</>,
       ],
     },
     {
@@ -67,12 +65,11 @@ function Experience() {
       period: "Jan 2011 - Mar 2016 (5 years, 2 months)",
       icon: netinfoIcon,
       responsibilities: [
-        "Executed full-cycle digital advertising campaigns across Google Ads, Facebook Ads, programmatic platforms, and premium publisher networks, managing $500K+ in annual ad spend",
-        "Optimized campaign performance using DFP (DoubleClick for Publishers), AdWords, and proprietary ad servers, consistently exceeding KPI benchmarks by 15-20% and reducing CPA by 25%",
-        "Partnered with sales, creative, and technical teams to develop high-converting ad creatives and landing pages, improving CTR by 35% and conversion rates by 28%",
-        "Delivered actionable insights through detailed campaign analytics and performance dashboards, driving strategic decisions that improved client retention from 70% to 95%",
-        "Managed portfolio of 20+ enterprise clients as primary technical contact, providing consultation on campaign strategy, targeting optimization, and performance improvement",
-        "Maintained strict adherence to GDPR, IAB standards, and platform-specific policies, ensuring 100% compliance across all campaigns and preventing potential legal issues",
+        <>Executed full-cycle digital advertising campaigns across <strong>Google Ads</strong>, <strong>Facebook Ads</strong>, and programmatic platforms, managing <strong>$500K+</strong> in annual ad spend</>,
+        <>Optimized campaign performance using <strong>DFP (DoubleClick for Publishers)</strong> and <strong>AdWords</strong>, exceeding KPI benchmarks by 15–20% and reducing CPA by 25%</>,
+        <>Partnered with sales, creative, and technical teams to develop high-converting ad creatives, improving CTR by 35%</>,
+        <>Managed portfolio of <strong>20+ enterprise clients</strong> as primary technical contact, improving client retention from 70% to 95%</>,
+        <>Ensured <strong>GDPR</strong> and <strong>IAB</strong> compliance across all campaigns and platform-specific policies</>,
       ],
     },
   ];
