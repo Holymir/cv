@@ -1,4 +1,4 @@
-/* PDF/Print Styles for Resume Download */
+/* ===== PDF/Print Styles — Editorial Monograph ===== */
 /* .pdf-mode is applied during html2pdf capture */
 /* @media print is fallback for browser Ctrl+P */
 
@@ -11,226 +11,252 @@
 .pdf-mode .experience-icon,
 .pdf-mode .projects,
 .pdf-mode footer {
-    display: none !important;
+  display: none !important;
+}
+
+/* ===== Hide section numbering ===== */
+.pdf-mode .section-title::before {
+  display: none !important;
+}
+
+/* ===== Hide decorative pseudo-elements ===== */
+.pdf-mode .skill-category::before,
+.pdf-mode .certificate-card::before,
+.pdf-mode .education-card::before {
+  display: none !important;
 }
 
 /* ===== Force all animations visible ===== */
 .pdf-mode .animated-section {
-    opacity: 1 !important;
-    transform: none !important;
+  opacity: 1 !important;
+  transform: none !important;
 }
 
 /* ===== Base resets ===== */
 .pdf-mode,
 .pdf-mode .App {
-    background: white !important;
-    background-image: none !important;
+  background: white !important;
+  background-image: none !important;
 }
 
 .pdf-mode .App::before {
-    display: none !important;
+  display: none !important;
 }
 
 .pdf-mode main {
-    padding: 0 !important;
-    margin: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 /* ===== Header ===== */
 .pdf-mode .header {
-    position: relative !important;
-    padding: 8px 0 12px 0 !important;
-    box-shadow: none !important;
-    border-bottom: 2px solid #000 !important;
-    background: white !important;
-    color: black !important;
-    backdrop-filter: none !important;
+  position: relative !important;
+  padding: 8px 0 12px 0 !important;
+  box-shadow: none !important;
+  border-bottom: 2px solid #000 !important;
+  background: white !important;
+  color: black !important;
+  backdrop-filter: none !important;
 }
 
 .pdf-mode .header * {
-    color: black !important;
+  color: black !important;
 }
 
 .pdf-mode .header-main {
-    margin-bottom: 8px !important;
+  margin-bottom: 8px !important;
 }
 
 .pdf-mode .header-info h1 {
-    -webkit-text-fill-color: black !important;
-    background: none !important;
-    font-size: 1.8em !important;
-    margin-bottom: 4px !important;
+  -webkit-text-fill-color: black !important;
+  background: none !important;
+  font-size: 1.8em !important;
+  margin-bottom: 4px !important;
 }
 
 .pdf-mode .header-info .title {
-    font-size: 1.1em !important;
-    margin-bottom: 6px !important;
-    opacity: 1 !important;
-    max-height: none !important;
-    color: #333 !important;
+  font-size: 1.1em !important;
+  margin-bottom: 6px !important;
+  opacity: 1 !important;
+  max-height: none !important;
+  color: #333 !important;
 }
 
 .pdf-mode .contact-quick {
-    opacity: 1 !important;
-    max-height: none !important;
-    display: flex !important;
-    font-size: 0.85em !important;
-    margin-bottom: 0 !important;
+  opacity: 1 !important;
+  max-height: none !important;
+  display: flex !important;
+  font-size: 0.85em !important;
+  margin-bottom: 0 !important;
 }
 
 .pdf-mode .header-social {
-    display: none !important;
+  display: none !important;
 }
 
 /* ===== Sections ===== */
 .pdf-mode section {
-    background: white !important;
-    color: black !important;
-    padding: 12px 0 8px 0 !important;
-    margin-bottom: 8px !important;
-    backdrop-filter: none !important;
+  background: white !important;
+  color: black !important;
+  padding: 12px 0 8px 0 !important;
+  margin-bottom: 8px !important;
+  backdrop-filter: none !important;
 }
 
 .pdf-mode section * {
-    color: black !important;
+  color: black !important;
 }
 
 .pdf-mode .section-title {
-    color: #222 !important;
-    border-bottom: 2px solid #4CAF50;
-    padding-bottom: 6px !important;
-    margin-bottom: 12px !important;
-    font-size: 1.6em !important;
+  color: #222 !important;
+  border-bottom: 2px solid #c4956a;
+  padding-bottom: 6px !important;
+  margin-bottom: 12px !important;
+  font-size: 1.6em !important;
 }
 
 .pdf-mode .container {
-    padding: 0 15px !important;
+  padding: 0 15px !important;
 }
 
-/* ===== Experience - force ALL items expanded ===== */
+/* ===== Experience — force ALL items expanded ===== */
 .pdf-mode .experience-item {
-    opacity: 1 !important;
-    background-color: white !important;
-    border: 1px solid #ddd !important;
-    border-left: 3px solid #4CAF50 !important;
-    margin-bottom: 10px !important;
-    padding: 12px 15px !important;
-    border-radius: 0 !important;
+  opacity: 1 !important;
+  background-color: white !important;
+  border: 1px solid #ddd !important;
+  border-left: 3px solid #c4956a !important;
+  margin-bottom: 10px !important;
+  padding: 12px 15px !important;
+  border-radius: 0 !important;
 }
 
 .pdf-mode .responsibilities,
 .pdf-mode .responsibilities.hide,
 .pdf-mode .responsibilities.show {
-    display: block !important;
-    opacity: 1 !important;
-    max-height: none !important;
-    animation: none !important;
-    padding: 0 !important;
-    margin: 8px 0 0 0 !important;
-    overflow: visible !important;
+  display: block !important;
+  opacity: 1 !important;
+  max-height: none !important;
+  animation: none !important;
+  padding: 0 !important;
+  margin: 8px 0 0 0 !important;
+  overflow: visible !important;
 }
 
 .pdf-mode .responsibilities li {
-    font-size: 0.88em !important;
-    line-height: 1.5 !important;
-    margin-bottom: 5px !important;
-    padding-left: 18px !important;
-    color: #333 !important;
+  font-size: 0.88em !important;
+  line-height: 1.5 !important;
+  margin-bottom: 5px !important;
+  padding-left: 18px !important;
+  color: #333 !important;
 }
 
-.pdf-mode .responsibilities li:before {
-    color: #4CAF50 !important;
+.pdf-mode .responsibilities li::before {
+  background-color: #c4956a !important;
 }
 
 .pdf-mode .experience-header {
-    margin-bottom: 8px !important;
-    cursor: default !important;
+  margin-bottom: 8px !important;
+  cursor: default !important;
 }
 
 .pdf-mode .experience-item h3 {
-    font-size: 1.2em !important;
-    margin-bottom: 2px !important;
-    color: black !important;
+  font-size: 1.2em !important;
+  margin-bottom: 2px !important;
+  color: black !important;
 }
 
 .pdf-mode .company-info {
-    font-size: 0.95em !important;
-    margin-bottom: 2px !important;
-    color: #333 !important;
+  font-size: 0.95em !important;
+  margin-bottom: 2px !important;
+  color: #333 !important;
 }
 
 .pdf-mode .period {
-    font-size: 0.85em !important;
-    color: #555 !important;
-    margin: 0 !important;
+  font-size: 0.85em !important;
+  color: #555 !important;
+  margin: 0 !important;
+}
+
+/* ===== About ===== */
+.pdf-mode .about-summary {
+  border-left-color: #c4956a !important;
 }
 
 /* ===== Skills ===== */
 .pdf-mode .skill-category {
-    margin-bottom: 10px !important;
+  margin-bottom: 10px !important;
 }
 
 .pdf-mode .skills-grid,
 .pdf-mode .certificates-grid,
 .pdf-mode .languages-grid {
-    gap: 8px !important;
+  gap: 8px !important;
 }
 
 .pdf-mode .skill-badge {
-    border: 1px solid #ddd !important;
-    background: white !important;
-    color: black !important;
-    padding: 3px 8px !important;
-    margin: 2px !important;
-    font-size: 0.82em !important;
+  border: 1px solid #ddd !important;
+  background: white !important;
+  color: black !important;
+  padding: 3px 8px !important;
+  margin: 2px !important;
+  font-size: 0.82em !important;
 }
 
 /* ===== Cards ===== */
 .pdf-mode .certificate-card,
 .pdf-mode .education-card,
 .pdf-mode .language-card {
-    background: white !important;
-    border: 1px solid #ddd !important;
-    margin-bottom: 8px !important;
-    padding: 10px !important;
+  background: white !important;
+  border: 1px solid #ddd !important;
+  border-left: 3px solid #c4956a !important;
+  margin-bottom: 8px !important;
+  padding: 10px !important;
+}
+
+.pdf-mode .education-card.in-progress {
+  border-left-color: #e2b340 !important;
 }
 
 /* ===== Global resets ===== */
 .pdf-mode * {
-    box-shadow: none !important;
-    text-shadow: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
 }
 
 .pdf-mode a {
-    color: #0066cc !important;
-    text-decoration: none !important;
+  color: #0066cc !important;
+  text-decoration: none !important;
 }
 
 .pdf-mode .contact-link {
-    color: black !important;
+  color: black !important;
 }
 
 /* ===== Fallback: browser print (Ctrl+P) ===== */
 @media print {
-    body { background: white; color: black; }
-    .header-nav, .scroll-to-top, .download-resume-btn,
-    .skip-link, .expand-icon, .experience-icon,
-    .projects, footer { display: none !important; }
-    .animated-section { opacity: 1 !important; transform: none !important; }
-    .App { background: white !important; }
-    .App::before { display: none !important; }
-    .header { position: relative; background: white !important;
-        box-shadow: none; border-bottom: 2px solid #000; }
-    .header * { color: black !important; }
-    .header-info h1 { -webkit-text-fill-color: black !important; }
-    .header-info .title { opacity: 1 !important; max-height: none !important; }
-    .contact-quick { opacity: 1 !important; max-height: none !important; }
-    .header-social { display: none; }
-    section { background: white !important; color: black !important; }
-    section * { color: black !important; }
-    .responsibilities, .responsibilities.hide, .responsibilities.show {
-        display: block !important; opacity: 1 !important;
-        max-height: none !important; overflow: visible !important; }
-    * { box-shadow: none !important; text-shadow: none !important; }
-    @page { margin: 1.5cm 1cm; size: A4; }
+  body { background: white; color: black; }
+  .header-nav, .scroll-to-top, .download-resume-btn,
+  .skip-link, .expand-icon, .experience-icon,
+  .projects, footer { display: none !important; }
+  .section-title::before { display: none !important; }
+  .skill-category::before,
+  .certificate-card::before,
+  .education-card::before { display: none !important; }
+  .animated-section { opacity: 1 !important; transform: none !important; }
+  .App { background: white !important; }
+  .App::before { display: none !important; }
+  .header { position: relative; background: white !important;
+    box-shadow: none; border-bottom: 2px solid #000; }
+  .header * { color: black !important; }
+  .header-info h1 { -webkit-text-fill-color: black !important; }
+  .header-info .title { opacity: 1 !important; max-height: none !important; }
+  .contact-quick { opacity: 1 !important; max-height: none !important; }
+  .header-social { display: none; }
+  section { background: white !important; color: black !important; }
+  section * { color: black !important; }
+  .responsibilities, .responsibilities.hide, .responsibilities.show {
+    display: block !important; opacity: 1 !important;
+    max-height: none !important; overflow: visible !important; }
+  * { box-shadow: none !important; text-shadow: none !important; }
+  @page { margin: 1.5cm 1cm; size: A4; }
 }

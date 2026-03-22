@@ -1,21 +1,31 @@
-/* src/components/SkipLink.css */
+/* ===== SkipLink — Editorial Monograph ===== */
 
 .skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: #4CAF50;
-    color: white;
-    padding: 8px 16px;
-    text-decoration: none;
-    font-weight: bold;
-    z-index: 1000;
-    border-radius: 0 0 4px 0;
-    transition: top 0.3s ease;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: var(--accent, #c4956a);
+  color: var(--bg-primary, #0a0a0b);
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  padding: 8px 16px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85em;
+  z-index: 1000;
+  border-radius: 0 0 4px 0;
+  transition: top 0.3s ease;
 }
 
 .skip-link:focus {
-    top: 0;
-    outline: 3px solid #fff;
-    outline-offset: 2px;
+  top: 0;
+  outline: 3px solid var(--text-primary, #f0ece6);
+  outline-offset: 2px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .skip-link {
+    font-size: 0.8em;
+    padding: 6px 12px;
+  }
 }

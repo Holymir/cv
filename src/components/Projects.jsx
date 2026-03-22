@@ -1,12 +1,35 @@
 // src/components/Projects.jsx
 
 import React from "react";
-import { FaGithub, FaExternalLinkAlt, FaRocket, FaChartLine, FaNewspaper, FaBrain, FaClock } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaRocket, FaChartLine, FaNewspaper, FaBrain, FaClock, FaWallet, FaLayerGroup, FaFlask, FaLink } from "react-icons/fa";
 import AnimatedSection from "./AnimatedSection";
 import "./Projects.css";
 
 function Projects() {
     const projects = [
+        {
+            name: "LiquidArc",
+            tagline: "DeFi Analytics, Simplified",
+            description: "A DeFi portfolio analytics dashboard that aggregates liquidity positions, yield opportunities, and strategy simulations across multiple chains. Designed for DeFi users who want a clear, non-custodial view of their on-chain portfolio without connecting a wallet to yet another protocol.",
+            technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "PostgreSQL", "Prisma", "viem", "Solana Web3.js", "Recharts", "Docker"],
+            features: [
+                "LP position tracking across 5 major chains with real-time pricing",
+                "Yield discovery engine covering 20+ DeFi protocols",
+                "Built-in strategy simulator for impermanent loss and APY projections",
+                "Multi-chain support spanning EVM networks and Solana",
+                "Fully non-custodial — read-only address monitoring, no wallet signatures required"
+            ],
+            links: {
+                live: "https://liquidarc.app",
+                github: "https://github.com/Holymir/liquid-arc"
+            },
+            highlights: [
+                { icon: FaWallet, text: "Portfolio Tracking" },
+                { icon: FaLayerGroup, text: "Multi-Chain Support" },
+                { icon: FaFlask, text: "Strategy Simulator" },
+                { icon: FaLink, text: "20+ Protocol Integrations" }
+            ]
+        },
         {
             name: "SentiFi AI",
             tagline: "Cryptocurrency Sentiment Intelligence Platform",

@@ -1,246 +1,264 @@
-/* src/components/Experience.css */
+/* ===== Experience — Editorial Monograph ===== */
 
 .experience {
-    background-color: rgba(28, 28, 28, 0.75);
-    color: #fff;
-    padding: 60px 0;
-    backdrop-filter: blur(2px);
-    margin-bottom: 50px;
-    scroll-margin: 82px;
+  counter-increment: section-counter;
+  background-color: transparent;
+  color: var(--text-primary);
+  padding: 72px 0;
+  margin-bottom: 0;
+  scroll-margin: 82px;
 }
 
 .experience .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
 }
 
+/* Section title with counter */
 .experience .section-title {
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    text-align: center;
-    color: #4CAF50;
-    font-weight: 600;
-    letter-spacing: 1px;
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.experience .section-title::before {
+  content: counter(section-counter, decimal-leading-zero) " / ";
+  color: var(--accent);
+  font-family: var(--font-mono);
 }
 
 .experience-timeline {
-    position: relative;
+  position: relative;
 }
 
+/* Cards on surface bg */
 .experience-item {
-    margin-bottom: 20px;
-    padding: 25px;
-    background-color: rgba(40, 40, 40, 0.4);
-    border-radius: 12px;
-    border-left: 4px solid #4CAF50;
-    transition: all 0.3s ease;
+  margin-bottom: 16px;
+  padding: 24px;
+  background-color: var(--bg-surface);
+  border-radius: 6px;
+  border-left: 3px solid transparent;
+  transition: all var(--duration) var(--ease);
 }
 
 .experience-item.expanded {
-    background-color: rgba(40, 40, 40, 0.6);
+  border-left-color: var(--accent);
 }
 
 .experience-item:hover {
-    background-color: rgba(40, 40, 40, 0.7);
-    box-shadow: 0 8px 24px rgba(76, 175, 80, 0.2);
+  background-color: var(--bg-elevated);
 }
 
 .experience-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    cursor: pointer;
-    user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  cursor: pointer;
+  user-select: none;
 }
 
 .experience-item.collapsed .experience-header {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .experience-item.expanded .experience-header {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .experience-right {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
+/* Expand icon with border */
 .expand-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 35px;
-    height: 35px;
-    background-color: rgba(76, 175, 80, 0.15);
-    border-radius: 50%;
-    color: #4CAF50;
-    font-size: 1.1em;
-    transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-secondary);
+  font-size: 0.9em;
+  transition: all var(--duration) var(--ease);
 }
 
 .experience-header:hover .expand-icon {
-    background-color: rgba(76, 175, 80, 0.3);
-    transform: scale(1.1);
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 .experience-title-section {
-    flex: 1;
+  flex: 1;
 }
 
 .experience-item h3 {
-    font-size: 1.8em;
-    margin-bottom: 8px;
-    color: #fff;
-    font-weight: 600;
+  font-family: var(--font-display);
+  font-size: 1.5em;
+  margin-bottom: 6px;
+  color: var(--text-primary);
+  font-weight: 600;
 }
 
 .company-info {
-    font-size: 1.2em;
-    margin-bottom: 8px;
-    color: #00ccff;
+  font-size: 1.05em;
+  margin-bottom: 6px;
+  color: var(--text-secondary);
 }
 
 .company-name {
-    font-weight: 600;
+  font-weight: 600;
+  color: var(--text-primary);
 }
 
 .company-description {
-    color: #aaa;
-    font-style: italic;
+  color: var(--text-muted);
+  font-style: italic;
 }
 
+/* Period in mono */
 .period {
-    font-size: 1em;
-    color: #4CAF50;
-    font-weight: 500;
-    margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin: 0;
 }
 
 .experience-icon {
-    flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 .experience-icon img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 8px;
-    transition: transform 0.3s ease;
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  border-radius: 6px;
+  background-color: var(--bg-elevated);
+  padding: 8px;
+  transition: transform var(--duration) var(--ease);
 }
 
 .experience-header:hover .experience-icon img {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
+/* Responsibilities — small copper dot bullets */
 .responsibilities {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
 }
 
 .responsibilities.hide {
-    max-height: 0;
-    opacity: 0;
-    margin: 0;
+  max-height: 0;
+  opacity: 0;
+  margin: 0;
 }
 
 .responsibilities.show {
-    max-height: 2000px;
-    opacity: 1;
-    animation: slideDown 0.3s ease-out;
+  max-height: 2000px;
+  opacity: 1;
+  animation: slideDown 0.3s ease-out;
 }
 
 @keyframes slideDown {
-    from {
-        opacity: 0;
-        max-height: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        max-height: 2000px;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    max-height: 2000px;
+    transform: translateY(0);
+  }
 }
 
 .responsibilities li {
-    font-size: 1.05em;
-    line-height: 1.7;
-    margin-bottom: 12px;
-    padding-left: 25px;
-    position: relative;
-    color: #ddd;
+  font-size: 0.95em;
+  line-height: 1.7;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+  color: var(--text-secondary);
 }
 
-.responsibilities li:before {
-    content: '▹';
-    position: absolute;
-    left: 0;
-    color: #4CAF50;
-    font-size: 1.2em;
-    font-weight: bold;
+.responsibilities li::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 10px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--accent);
 }
 
-/* Responsive Design */
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
-    .experience {
-        padding: 40px 0;
-    }
+  .experience {
+    padding: 48px 0;
+  }
 
-    .experience .section-title {
-        font-size: 2em;
-        margin-bottom: 30px;
-    }
+  .experience .section-title {
+    margin-bottom: 28px;
+  }
 
-    .experience-item {
-        padding: 15px;
-        margin-bottom: 15px;
-    }
+  .experience-item {
+    padding: 16px;
+    margin-bottom: 12px;
+  }
 
-    .experience-header {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
+  .experience-header {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 
-    .experience-title-section {
-        flex-basis: 100%;
-        margin-bottom: 10px;
-    }
+  .experience-title-section {
+    flex-basis: 100%;
+    margin-bottom: 10px;
+  }
 
-    .experience-right {
-        justify-content: flex-end;
-        width: 100%;
-        gap: 10px;
-    }
+  .experience-right {
+    justify-content: flex-end;
+    width: 100%;
+    gap: 10px;
+  }
 
-    .experience-icon img {
-        width: 45px;
-        height: 45px;
-    }
+  .experience-icon img {
+    width: 40px;
+    height: 40px;
+  }
 
-    .expand-icon {
-        width: 30px;
-        height: 30px;
-        font-size: 0.9em;
-    }
+  .expand-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 0.8em;
+  }
 
-    .experience-item h3 {
-        font-size: 1.3em;
-    }
+  .experience-item h3 {
+    font-size: 1.2em;
+  }
 
-    .company-info {
-        font-size: 1em;
-    }
+  .company-info {
+    font-size: 0.95em;
+  }
 
-    .responsibilities li {
-        font-size: 0.95em;
-        padding-left: 20px;
-    }
+  .responsibilities li {
+    font-size: 0.9em;
+    padding-left: 18px;
+  }
 }
