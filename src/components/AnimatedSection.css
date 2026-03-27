@@ -1,55 +1,56 @@
-/* src/components/AnimatedSection.css */
+/* ===== AnimatedSection — Editorial Monograph ===== */
 
 .animated-section {
-    opacity: 0;
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  opacity: 0;
+  transition: opacity 0.7s var(--ease, cubic-bezier(0.16, 1, 0.3, 1)),
+              transform 0.7s var(--ease, cubic-bezier(0.16, 1, 0.3, 1));
 }
 
 .animated-section.visible {
-    opacity: 1;
+  opacity: 1;
 }
 
-/* Fade Up Animation */
+/* Fade Up */
 .animated-section.fade-up {
-    transform: translateY(30px);
+  transform: translateY(24px);
 }
 
 .animated-section.fade-up.visible {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
-/* Fade In Animation */
+/* Fade In */
 .animated-section.fade-in {
-    transform: none;
+  transform: none;
 }
 
 .animated-section.fade-in.visible {
-    transform: none;
+  transform: none;
 }
 
-/* Fade Left Animation */
+/* Fade Left */
 .animated-section.fade-left {
-    transform: translateX(30px);
+  transform: translateX(24px);
 }
 
 .animated-section.fade-left.visible {
-    transform: translateX(0);
+  transform: translateX(0);
 }
 
-/* Fade Right Animation */
+/* Fade Right */
 .animated-section.fade-right {
-    transform: translateX(-30px);
+  transform: translateX(-24px);
 }
 
 .animated-section.fade-right.visible {
-    transform: translateX(0);
+  transform: translateX(0);
 }
 
-/* Scale Animation */
+/* Scale */
 .animated-section.scale {
-    transform: scale(0.9);
+  transform: scale(0.95);
 }
 
 .animated-section.scale.visible {
-    transform: scale(1);
+  transform: scale(1);
 }

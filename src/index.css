@@ -1,4 +1,46 @@
-* {
+/* ===== Midnight Circuit — Design Tokens ===== */
+:root {
+  /* Backgrounds */
+  --bg-primary: #0C1120;
+  --bg-surface: #111827;
+  --bg-elevated: #1E293B;
+  --bg-hover: #263348;
+
+  /* Text */
+  --text-primary: #F1F5F9;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+
+  /* Accent — electric sky blue */
+  --accent: #38BDF8;
+  --accent-hover: #7DD3FC;
+  --accent-subtle: rgba(56, 189, 248, 0.10);
+
+  /* Borders */
+  --border: #1E293B;
+  --border-subtle: #152033;
+
+  /* Warning */
+  --warning: #FBBF24;
+
+  /* Fonts */
+  --font-display: 'Sora', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Layout */
+  --container: 860px;
+  --container-padding: 24px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration: 0.4s;
+}
+
+/* ===== Reset ===== */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -6,26 +48,25 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
-  color: #fff;
-  background-color: #000;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: var(--font-mono);
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
   font-weight: 600;
   line-height: 1.2;
 }
@@ -44,14 +85,19 @@ button {
   font-family: inherit;
 }
 
-::selection {
-  background-color: #4CAF50;
-  color: #000;
+ul, ol {
+  list-style: none;
 }
 
-/* Accessibility - Focus Styles */
+/* ===== Selection ===== */
+::selection {
+  background-color: var(--accent);
+  color: var(--bg-primary);
+}
+
+/* ===== Focus — Accessibility ===== */
 *:focus {
-  outline: 2px solid #4CAF50;
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
@@ -60,11 +106,11 @@ button {
 }
 
 *:focus-visible {
-  outline: 2px solid #4CAF50;
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
-/* Skip to main content for screen readers */
+/* ===== Screen-reader only ===== */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -77,7 +123,7 @@ button {
   border-width: 0;
 }
 
-/* Reduced motion support */
+/* ===== Reduced motion ===== */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

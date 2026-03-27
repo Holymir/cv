@@ -1,54 +1,53 @@
-/* src/components/ScrollToTop.css */
+/* ===== ScrollToTop — Editorial Monograph ===== */
 
 .scroll-to-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(135deg, #4CAF50, #45a049);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
-    z-index: 999;
-    transition: all 0.3s ease;
-    animation: fadeIn 0.3s ease-in-out;
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 44px;
+  height: 44px;
+  background-color: var(--bg-elevated);
+  color: var(--accent);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  z-index: 999;
+  transition: all var(--duration) var(--ease);
+  animation: fadeIn 0.3s ease-in-out;
 }
 
 .scroll-to-top:hover {
-    background: linear-gradient(135deg, #45a049, #4CAF50);
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.6);
+  background-color: var(--accent);
+  color: var(--bg-primary);
+  border-color: var(--accent);
 }
 
 .scroll-to-top:active {
-    transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Mobile responsiveness */
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
-    .scroll-to-top {
-        bottom: 20px;
-        right: 20px;
-        width: 45px;
-        height: 45px;
-        font-size: 18px;
-    }
+  .scroll-to-top {
+    bottom: 18px;
+    right: 18px;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
 }

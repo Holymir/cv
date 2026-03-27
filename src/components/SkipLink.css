@@ -1,21 +1,31 @@
-/* src/components/SkipLink.css */
+/* ===== SkipLink — Midnight Circuit ===== */
 
 .skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: #4CAF50;
-    color: white;
-    padding: 8px 16px;
-    text-decoration: none;
-    font-weight: bold;
-    z-index: 1000;
-    border-radius: 0 0 4px 0;
-    transition: top 0.3s ease;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: var(--accent, #38BDF8);
+  color: var(--bg-primary, #0C1120);
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  padding: 8px 16px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85em;
+  z-index: 1000;
+  border-radius: 0 0 4px 0;
+  transition: top 0.3s ease;
 }
 
 .skip-link:focus {
-    top: 0;
-    outline: 3px solid #fff;
-    outline-offset: 2px;
+  top: 0;
+  outline: 3px solid var(--text-primary, #F1F5F9);
+  outline-offset: 2px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .skip-link {
+    font-size: 0.8em;
+    padding: 6px 12px;
+  }
 }
