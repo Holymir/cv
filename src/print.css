@@ -109,7 +109,7 @@
 
 .pdf-mode .section-title {
   color: #222 !important;
-  border-bottom: 2px solid #c4956a;
+  border-bottom: 2px solid #38BDF8;
   padding-bottom: 6px !important;
   margin-bottom: 12px !important;
   font-size: 1.6em !important;
@@ -124,7 +124,7 @@
   opacity: 1 !important;
   background-color: white !important;
   border: 1px solid #ddd !important;
-  border-left: 3px solid #c4956a !important;
+  border-left: 3px solid #38BDF8 !important;
   margin-bottom: 10px !important;
   padding: 12px 15px !important;
   border-radius: 0 !important;
@@ -151,7 +151,7 @@
 }
 
 .pdf-mode .responsibilities li::before {
-  background-color: #c4956a !important;
+  background-color: #38BDF8 !important;
 }
 
 .pdf-mode .experience-header {
@@ -179,7 +179,7 @@
 
 /* ===== About ===== */
 .pdf-mode .about-summary {
-  border-left-color: #c4956a !important;
+  border-left-color: #38BDF8 !important;
 }
 
 /* ===== Skills ===== */
@@ -208,13 +208,13 @@
 .pdf-mode .language-card {
   background: white !important;
   border: 1px solid #ddd !important;
-  border-left: 3px solid #c4956a !important;
+  border-left: 3px solid #38BDF8 !important;
   margin-bottom: 8px !important;
   padding: 10px !important;
 }
 
 .pdf-mode .education-card.in-progress {
-  border-left-color: #e2b340 !important;
+  border-left-color: #FBBF24 !important;
 }
 
 /* ===== Global resets ===== */

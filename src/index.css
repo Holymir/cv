@@ -1,27 +1,27 @@
-/* ===== Editorial Monograph — Design Tokens ===== */
+/* ===== Midnight Circuit — Design Tokens ===== */
 :root {
   /* Backgrounds */
-  --bg-primary: #0a0a0b;
-  --bg-surface: #131315;
-  --bg-elevated: #1a1a1d;
-  --bg-hover: #222225;
+  --bg-primary: #0C1120;
+  --bg-surface: #111827;
+  --bg-elevated: #1E293B;
+  --bg-hover: #263348;
 
   /* Text */
-  --text-primary: #f0ece6;
-  --text-secondary: #8a8680;
-  --text-muted: #5a5652;
+  --text-primary: #F1F5F9;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
 
-  /* Accent — copper / bronze */
-  --accent: #c4956a;
-  --accent-hover: #d4a87a;
-  --accent-subtle: rgba(196, 149, 106, 0.10);
+  /* Accent — electric sky blue */
+  --accent: #38BDF8;
+  --accent-hover: #7DD3FC;
+  --accent-subtle: rgba(56, 189, 248, 0.10);
 
   /* Borders */
-  --border: #2a2a2d;
-  --border-subtle: #1e1e21;
+  --border: #1E293B;
+  --border-subtle: #152033;
 
   /* Warning */
-  --warning: #e2b340;
+  --warning: #FBBF24;
 
   /* Fonts */
   --font-display: 'Sora', sans-serif;

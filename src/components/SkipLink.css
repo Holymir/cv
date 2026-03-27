@@ -1,11 +1,11 @@
-/* ===== SkipLink — Editorial Monograph ===== */
+/* ===== SkipLink — Midnight Circuit ===== */
 
 .skip-link {
   position: absolute;
   top: -40px;
   left: 0;
-  background-color: var(--accent, #c4956a);
-  color: var(--bg-primary, #0a0a0b);
+  background-color: var(--accent, #38BDF8);
+  color: var(--bg-primary, #0C1120);
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
   padding: 8px 16px;
   text-decoration: none;
@@ -18,7 +18,7 @@
 
 .skip-link:focus {
   top: 0;
-  outline: 3px solid var(--text-primary, #f0ece6);
+  outline: 3px solid var(--text-primary, #F1F5F9);
   outline-offset: 2px;
 }
 
