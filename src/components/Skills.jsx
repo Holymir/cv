@@ -7,15 +7,19 @@ function Skills() {
     const skillCategories = [
         {
             category: "Blockchain & Smart Contracts",
-            skills: ["Solidity", "Smart Contract Security", "Gas Optimization", "EVM", "Hardhat", "Foundry", "Ethers.js", "DeFi Protocols", "Layer 2 Solutions"],
+            skills: ["Solidity", "Smart Contract Security", "Gas Optimization", "EVM", "Hardhat", "Foundry", "Truffle", "Ethers.js", "Web3.js", "DeFi Protocols", "Layer 2 Solutions"],
         },
         {
             category: "Languages",
             skills: ["Java", "JavaScript", "TypeScript", "Go", "Rust"],
         },
         {
-            category: "Backend & Frontend",
-            skills: ["Spring Boot", "React", "Vue.js", "REST APIs"],
+            category: "Backend & Infrastructure",
+            skills: ["Spring Boot", "Node.js", "Microservices", "REST APIs", "PostgreSQL", "Docker", "CI/CD"],
+        },
+        {
+            category: "Frontend",
+            skills: ["React", "Vue.js"],
         },
     ];
 
