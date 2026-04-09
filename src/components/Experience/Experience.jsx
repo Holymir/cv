@@ -43,6 +43,26 @@ function Experience() {
         <>Performed security audits and implemented cryptographic protocols (<strong>ECDSA</strong>, <strong>Merkle trees</strong>), identifying critical vulnerabilities and protecting <strong>$10M+</strong> in digital assets</>,
         <>Set up testing and deployment infrastructure using <strong>Hardhat</strong> and <strong>Truffle</strong> with <strong>CI/CD</strong> pipelines</>,
       ],
+      projects: [
+        {
+          name: "CUDOS — Cosmos Smart Contracts & Dev Tools",
+          tech: "Rust",
+          techKey: "rust",
+          description: "CosmWasm smart contracts and developer tooling for CUDOS, a custom Cosmos-based blockchain.",
+        },
+        {
+          name: "Merkle Tree Reward Distribution",
+          tech: "Go",
+          techKey: "go",
+          description: "On-chain Merkle tree-based reward token distribution system enabling efficient claim verification for token holders.",
+        },
+        {
+          name: "Ethereum Smart Contract Suite",
+          tech: "Node.js · Solidity",
+          techKey: "nodejs",
+          description: "End-to-end smart contract development across the Ethereum network — deployment scripts, testing, and integrations using Node.js alongside Solidity.",
+        },
+      ],
     },
     {
       title: "Head of Advertising Operations",
@@ -124,6 +144,20 @@ function Experience() {
                     <li key={idx}>{resp}</li>
                   ))}
                 </ul>
+                {exp.projects && exp.projects.length > 0 && (
+                  <div className={`sub-projects ${isExpanded ? "show" : "hide"}`}>
+                    <p className="sub-projects-label">Notable Projects</p>
+                    <div className="sub-projects-grid">
+                      {exp.projects.map((proj, pidx) => (
+                        <div key={pidx} className="sub-project-card">
+                          <span className={`tech-badge tech-${proj.techKey}`}>{proj.tech}</span>
+                          <p className="sub-project-name">{proj.name}</p>
+                          <p className="sub-project-desc">{proj.description}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             );
           })}

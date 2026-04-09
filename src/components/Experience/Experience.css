@@ -207,6 +207,82 @@
   background-color: var(--accent);
 }
 
+/* ===== Sub-projects ===== */
+
+.sub-projects {
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.sub-projects.hide {
+  max-height: 0;
+  opacity: 0;
+}
+
+.sub-projects.show {
+  max-height: 600px;
+  opacity: 1;
+}
+
+.sub-projects-label {
+  font-family: var(--font-mono);
+  font-size: 0.78em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin: 20px 0 10px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.sub-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.sub-project-card {
+  background-color: var(--bg-elevated);
+  border-radius: 6px;
+  padding: 12px 14px;
+  border: 1px solid var(--border-subtle);
+  transition: border-color var(--duration) var(--ease);
+}
+
+.sub-project-card:hover {
+  border-color: var(--border);
+}
+
+.tech-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.72em;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tech-rust { background-color: rgba(206, 66, 43, 0.15); color: #CE422B; }
+.tech-go   { background-color: rgba(0, 173, 216, 0.15); color: #00ADD8; }
+.tech-nodejs { background-color: rgba(51, 153, 51, 0.15); color: #339933; }
+
+.sub-project-name {
+  font-size: 0.88em;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 5px;
+}
+
+.sub-project-desc {
+  font-size: 0.82em;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   .experience {
@@ -260,5 +336,9 @@
   .responsibilities li {
     font-size: 0.9em;
     padding-left: 18px;
+  }
+
+  .sub-projects-grid {
+    grid-template-columns: 1fr;
   }
 }
