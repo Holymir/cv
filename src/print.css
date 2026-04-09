@@ -142,6 +142,34 @@
   overflow: visible !important;
 }
 
+.pdf-mode .sub-projects,
+.pdf-mode .sub-projects.hide,
+.pdf-mode .sub-projects.show {
+  display: block !important;
+  opacity: 1 !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+.pdf-mode .sub-projects-label {
+  color: #555 !important;
+  border-top-color: #ddd !important;
+  margin-top: 12px !important;
+  padding-top: 10px !important;
+}
+
+.pdf-mode .sub-project-card {
+  background: white !important;
+  border: 1px solid #ddd !important;
+}
+
+.pdf-mode .tech-rust { background-color: rgba(206, 66, 43, 0.1) !important; color: #a83218 !important; }
+.pdf-mode .tech-go   { background-color: rgba(0, 173, 216, 0.1) !important; color: #0077aa !important; }
+.pdf-mode .tech-nodejs { background-color: rgba(51, 153, 51, 0.1) !important; color: #226622 !important; }
+
+.pdf-mode .sub-project-name { color: black !important; }
+.pdf-mode .sub-project-desc { color: #333 !important; }
+
 .pdf-mode .responsibilities li {
   font-size: 0.88em !important;
   line-height: 1.5 !important;
@@ -257,6 +285,13 @@
   .responsibilities, .responsibilities.hide, .responsibilities.show {
     display: block !important; opacity: 1 !important;
     max-height: none !important; overflow: visible !important; }
+  .sub-projects, .sub-projects.hide, .sub-projects.show {
+    display: block !important; opacity: 1 !important;
+    max-height: none !important; overflow: visible !important; }
+  .sub-project-card { background: white !important; border: 1px solid #ddd !important; }
+  .tech-badge { background-color: #f0f0f0 !important; color: #333 !important; }
+  .sub-project-name { color: black !important; }
+  .sub-project-desc { color: #333 !important; }
   * { box-shadow: none !important; text-shadow: none !important; }
   @page { margin: 1.5cm 1cm; size: A4; }
 }
